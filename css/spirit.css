@@ -6,6 +6,7 @@
 	position: absolute;
 }
 
+.none {display: none; }
 .nopointer {pointer-events: none; }
 .noclick {pointer-events: none; }
 .nocursor {cursor: default; }
