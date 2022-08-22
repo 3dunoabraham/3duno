@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Non Fungible Button</title>
+		<title>3duno</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="main.css">
@@ -30,11 +30,15 @@
 
 			import * as THREE from 'three';
 
+			const lerp = (x, y, a) => x * (1 - a) + y * a;
+
+			let totalTimeElapsed = 0
 			let tRate = 0.5
 			let container;
 			let camera, scene, raycaster, renderer;
 
 			let INTERSECTED;
+			let SELECTED;
 			let theta = 0;
 
 			const pointer = new THREE.Vector2();
@@ -44,6 +48,8 @@
 			let orangeLevel = 0;
 			let orangeDOM;
 
+			let desire = [];
+
 			init();
 			animate();
 
@@ -52,9 +58,24 @@
 				document.addEventListener("click", (e) => {
 					if (INTERSECTED && Math.floor(INTERSECTED.position.y) == 0)
 					{
-						INTERSECTED.position.y = -2
+						// INTERSECTED.position.y = -2
+
 						// console.log(window.location.href)
-						alert(orangeLevel)
+						// alert(orangeLevel)
+					}
+					if (INTERSECTED) {
+						camera.lookAt( INTERSECTED.position );
+						SELECTED = {...INTERSECTED}
+
+						if (SELECTED) {
+
+							camera.position.y = SELECTED.position.y + 15
+							// camera.position.y = lerp(
+							// 	camera.position.y,
+							// 	SELECTED.position.y + 15,
+							// 	0.5) + Math.sin(totalTimeElapsed/20)/80
+							// camera.position.z = SELECTED.position.z + 30
+						}
 					}
 				})
 
@@ -64,9 +85,10 @@
 				container.appendChild( orangeDOM );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
-				camera.position.y = 20
+				camera = new THREE.PerspectiveCamera( 110, window.innerWidth / window.innerHeight, 1, 10000 );
+				// camera.position.y = 30
 				camera.position.z = 50
+				camera.lookAt(0,0,0)
 
 				scene = new THREE.Scene();
 				scene.background = new THREE.Color( 0xf0f0f0 );
@@ -75,7 +97,8 @@
 				light.position.set( 1, 1, 1 ).normalize();
 				scene.add( light );
 
-				const geometry = new THREE.IcosahedronGeometry( 1, 0 );
+				// const textgeometry = new THREE.TextGeometry( 1, 1, 1 );
+				const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 				const colors = [
 								0xff0000,
 								0xff8000,
@@ -94,8 +117,13 @@
 
 					const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: colors[i] } ) );
 
-					object.position.x = (-40*i);
-					object.rotation.y = Math.random() * 0.4 * Math.PI + 0.1;
+					object.position.z = (-30*i);
+					// object.position.z = Math.cos(i)*75;
+					// object.position.x = Math.sin(i)*25;
+					// object.position.z = Math.cos(i)*180;
+					// object.position.z = -Math.sin(i)*40;
+					// object.position.x = Math.sin(i)*75;
+					// object.rotation.y = Math.random() * 0.4 * Math.PI + 0.1;
 					// object.scale.y = (i * 0.2) + 1;
 					object.scale.x = 10
 					object.scale.y = 10
@@ -112,6 +140,8 @@
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
+
+
 
 				document.addEventListener( 'mousemove', onPointerMove );
 
@@ -140,7 +170,7 @@
 			//
 
 			function animate() {
-
+				totalTimeElapsed += 1
 				requestAnimationFrame( animate );
 
 				render();
@@ -150,15 +180,24 @@
 				if (orange)
 				{
 					let asd = parseInt(INTERSECTED.id)
+					// camera.position.set( INTERSECTED.position  );
+
+					// camera.position.x = INTERSECTED.position.x
+					// camera.lookAt( INTERSECTED.position );
+					// camera.position.z = 50
+					// camera.position.y = 20
 					orangeLevel += asd
 					orangeDOM.innerHTML = orangeLevel
+				} else {
+					// camera.position.x = scene.position.x
+					// camera.lookAt( scene.position );
 				}
 
 				theta += tRate;
 				tRate += 0.0001;
 
-				camera.position.x = radius * Math.sin( THREE.MathUtils.degToRad( theta ) );
-				camera.lookAt( scene.position );
+				// camera.position.x = radius * Math.sin( THREE.MathUtils.degToRad( theta ) );
+				// camera.lookAt( scene.position );
 
 				camera.updateMatrixWorld();
 
@@ -166,7 +205,8 @@
 
 				if (INTERSECTED && INTERSECTED.position.y < 0)
 				{
-					INTERSECTED.position.y = INTERSECTED.position.y < 0 ? INTERSECTED.position.y + 0.2  : 0
+
+					// INTERSECTED.position.y = INTERSECTED.position.y < 0 ? INTERSECTED.position.y + 0.2  : 0
 				}
 
 				raycaster.setFromCamera( pointer, camera );
@@ -206,6 +246,22 @@
 
 				}
 
+					if (SELECTED) {
+
+						camera.position.y = SELECTED.position.y + 15
+						// camera.position.y = lerp(
+						// 	camera.position.y,
+						// 	SELECTED.position.y + 15,
+						// 	0.5) + Math.sin(totalTimeElapsed/20)/80
+						// camera.position.z = SELECTED.position.z + 30
+						camera.position.z = lerp(
+							camera.position.z,
+							SELECTED.position.z + 30,
+							0.5)
+						camera.lookAt( SELECTED.position );
+					} else {
+
+					}
 				renderer.render( scene, camera );
 
 			}
