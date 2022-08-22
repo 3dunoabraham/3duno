@@ -4,7 +4,8 @@
 		<title>3duno</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="main.css">
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+		<link type="text/css" rel="stylesheet" href="css/spirit.css">
 		<style>
 			body {
 				background-color: #f0f0f0;
@@ -23,6 +24,16 @@
 		</style>
 	</head>
 	<body>
+        <div class="flex-wrap" style="position: fixed; padding-top: 50px">
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene2">SCENE.2</b>
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene3">SCENE.3</b>
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene4">SCENE.4</b>
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene5">SCENE.5</b>
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene6">SCENE.6</b>
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene7">SCENE.7</b>
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene8">SCENE.8</b>
+            <b class="tx-ls-2 tx-lg clickable pa-2 opacity-hover-75 scene-goto" style="text-shadow: 1px 1px #000000,  -1px 1px #00000077; color: #ccc" id="scene9">SCENE.9</b>
+        </div>
 		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
 		<script type="importmap">
@@ -802,7 +813,21 @@ THREE_OBJLoader.prototype = {
 			animate();
 
 			function init() {
-
+                var sceness = document.querySelectorAll('.scene-goto')
+                sceness.forEach(function(adomscene) {
+                  // adomscene is the current element
+                  adomscene.onclick = function(e) {
+                    SELECTED = scene.children[e.currentTarget.id.replace("scene","")]
+                    // $('.item').removeClass('scene-carousel-fix');
+                    // $('.scene-backdrop').css('display','none')
+                    // $('.quickview-scene').css('display','none');
+                    // $(this).parent().closest('.carousel-inner').css('overflow', 'hidden');
+                  }
+                });
+                // document.getElementById("scene2").addEventListener("click", (e) => {
+                //     console.log(scene.children)
+                //     SELECTED = scene.children[5]
+                // })
 				document.addEventListener("click", (e) => {
 					if (INTERSECTED && Math.floor(INTERSECTED.position.y) == 0)
 					{
@@ -834,7 +859,7 @@ THREE_OBJLoader.prototype = {
 				container.appendChild( orangeDOM );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 110, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 1, 10000 );
 				// camera.position.y = 30
 				camera.position.z = 50
 				camera.lookAt(0,0,0)
