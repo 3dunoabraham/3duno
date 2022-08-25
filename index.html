@@ -918,10 +918,10 @@ THREE_OBJLoader.prototype = {
                                     color:0xff9999,
                                 },
                                 {
-                                    img:"./img/grad2.jpg",
+                                    img:"./img/grrrid.jpg",
                                     wireframe:false,
                                     camera:{pos:[40 ,5,-27]},
-                                    box:{pos:[0,-23,0],scale:[1,0.1,1],},
+                                    box:{pos:[10,-19,0],scale:[7,0.1,17],},
                                     color:0xff9999,
                                 },
 								{
@@ -1001,7 +1001,7 @@ THREE_OBJLoader.prototype = {
 			   		// object.rotation.y = Math.PI / 2
                     object.position.x = 20
 			   		object.position.z = -90
-			   		object.position.y = -25
+			   		object.position.y = -13
 			   		object.castShadow = true
 
 					// let material = new THREE.MeshLambertMaterial({ color: 0xffaa00 });
@@ -1196,6 +1196,7 @@ THREE_OBJLoader.prototype = {
 
 					object.position.z = (-90*i) + colors[i].box.pos[2]
                     object.position.y = colors[i].box.pos[1]
+                    object.position.x = colors[i].box.pos[0]
 					// object.position.y = -i
 					// object.position.x = Math.sin(i)*25;
 					// object.position.z = Math.cos(i)*180;
