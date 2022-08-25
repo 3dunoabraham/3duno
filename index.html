@@ -861,19 +861,19 @@ THREE_OBJLoader.prototype = {
 						if (CLICKED) {
 
                             console.log("CLICKED.position.z", CLICKED.position.z)
-                            console.log(CLICKED.position.z/90)
+                            console.log(Math.floor(CLICKED.position.z/90))
 
                             var sceness = document.querySelectorAll('.amodalscreen')
                             sceness.forEach(function(adomscene) {
                                 // console.log(adomscene)
-                                if ("modal"+(-(CLICKED.position.z/90)) != adomscene.id)
+                                if ("modal"+(-(Math.floor(CLICKED.position.z/90))) != adomscene.id)
                                 {
                                     adomscene.className += " none"
                                 } else {
                                     // console.log(adomscene)
                                 }
                             })
-                            document.getElementById("modal"+(-(CLICKED.position.z/90))).classList.toggle("none")
+                            document.getElementById("modal"+(-(Math.floor(CLICKED.position.z/90)))).classList.toggle("none")
                             SELECTED = {...CLICKED}
 							// console.log(SELECTED.position.z/30)
 
@@ -893,7 +893,7 @@ THREE_OBJLoader.prototype = {
 				container.appendChild( orangeDOM );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 0.1, 10000 );
 				// camera.position.y = 30
 				camera.position.z = 50
 				camera.lookAt(0,0,0)
@@ -941,8 +941,8 @@ THREE_OBJLoader.prototype = {
 								{
                                     img:"./img/grad5.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0,250,-20]},
-                                    box:{pos:[0,0,-50],scale:[1,1,1],},
+                                    camera:{pos:[0,-30,50]},
+                                    box:{pos:[0,40,-50],scale:[4,0.5,4],},
                                     color:0xccff99,
                                 },
 								{
@@ -1155,6 +1155,42 @@ THREE_OBJLoader.prototype = {
                             scene.add( textobject );
                     } );
                 }
+                {
+                    ffontLoader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
+                            let textgeometry = new THREE.TextGeometry( `
+                                Click the Floor
+                                to
+                                Contact Us
+                                `, {
+                                font: font,
+                                size: 3,
+                                height: 0.2,
+                                // curveSegments: 2,
+                                // bevelEnabled: true,
+                                // bevelThickness: 1,
+                                // bevelSize: 0.5,
+                                // bevelOffset: 0,
+                                // bevelSegments: 2
+                            } );
+                            const textobject = new THREE.Mesh( textgeometry, new THREE.MeshLambertMaterial( { color: 0xffffff } ) );
+
+                            textobject.position.x = -50
+                            // textobject.position.y = 20
+                            textobject.position.z = -420
+                            // textobject.position.x = 63
+                            // textobject.position.z = -30
+                            textobject.position.y = 55
+                            // textobject.rotation.z = Math.PI/2
+                            // textobject.rotation.x = -60
+                            // textobject.rotation.y = -Math.PI/4
+
+                            // object.position.x = 20
+                            // object.position.y = -11
+                            // object.position.z = -90
+
+                            scene.add( textobject );
+                    } );
+                }
                 // {
                 //     ffontLoader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
                 //             let textgeometry = new THREE.TextGeometry( 'Games & Films \n Products & Motion Graphics \n Prototyping & Fashion', {
@@ -1336,16 +1372,16 @@ THREE_OBJLoader.prototype = {
 						// camera.position.z = SELECTED.position.z + 90
 						camera.position.z = lerp(
 							camera.position.z,
-							SELECTED.position.z + 26+(colors[-(SELECTED.position.z/90)] ? colors[-(SELECTED.position.z/90)].camera.pos[2]:0 ),
+							SELECTED.position.z + 26+(colors[-(Math.floor(SELECTED.position.z/90))] ? colors[-(Math.floor(SELECTED.position.z/90))].camera.pos[2]:0 ),
 							0.25)
-						if (colors[-(SELECTED.position.z/90)])
+						if (colors[-(Math.floor(SELECTED.position.z/90))])
 						{
-							// if (colors[-(SELECTED.position.z/90)].camera.pos)
+							// if (colors[-(Math.floor(SELECTED.position.z/90))].camera.pos)
 							// {
-							// 	console.log(colors[-(SELECTED.position.z/90)].camera.pos)
+							// 	console.log(colors[-(Math.floor(SELECTED.position.z/90))].camera.pos)
 							// }
-                            camera.position.x = lerp(camera.position.x ,colors[-(SELECTED.position.z/90)].camera.pos[0],.05)
-                            camera.position.y = lerp(camera.position.y ,colors[parseInt(-(SELECTED.position.z/90))].camera.pos[1],.05)
+                            camera.position.x = lerp(camera.position.x ,colors[-(Math.floor(SELECTED.position.z/90))].camera.pos[0],.05)
+                            camera.position.y = lerp(camera.position.y ,colors[parseInt(-(Math.floor(SELECTED.position.z/90)))].camera.pos[1],.05)
 						}
 						camera.lookAt( SELECTED.position.x, SELECTED.position.y-10, SELECTED.position.z   );
 					} else {
