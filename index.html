@@ -908,63 +908,63 @@ THREE_OBJLoader.prototype = {
 
 				colors = [
                                 {
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad1.jpg",
                                     wireframe:false,
                                     camera:{pos:[20 ,5,15]},
                                     box:{pos:[0,0,0],scale:[5,2,1],},
                                     color:0xff9999,
                                 },
                                 {
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad2.jpg",
                                     wireframe:false,
                                     camera:{pos:[40 ,5,-27]},
                                     box:{pos:[0,-23,0],scale:[1,0.1,1],},
                                     color:0xff9999,
                                 },
 								{
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad3.jpg",
                                     wireframe:false,
                                     camera:{pos:[0 ,-1,0]},
-                                    box:{pos:[0,15,0],scale:[0.3,0.3,0.3],},
+                                    box:{pos:[0,10,0],scale:[6,7,0.3],},
                                     color:0xffcc99,
                                 },
 								{
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad4.jpg",
                                     wireframe:false,
                                     camera:{pos:[-25,-15,-10]},
-                                    box:{pos:[0,0,0],scale:[1,1,1],},
+                                    box:{pos:[0,0,0],scale:[0.5,0.1,0.5],},
                                     color:0xffff99,
                                 },
 								{
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad5.jpg",
                                     wireframe:false,
                                     camera:{pos:[0,250,-20]},
                                     box:{pos:[0,0,-50],scale:[1,1,1],},
                                     color:0xccff99,
                                 },
 								{
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad6.jpg",
                                     wireframe:false,
                                     camera:{pos:[0,  50,0]},
                                     box:{pos:[0,80,0],scale:[1,1,1],},
                                     color:0x99ffcc,
                                 },
 								{
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad1.jpg",
                                     wireframe:true,
                                     camera:{pos:[0,  -6,0]},
                                     box:{pos:[0,120,0],scale:[1,1,1],},
                                     color:0x99ccff,
                                 },
 								{
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad1.jpg",
                                     wireframe:false,
                                     camera:{pos:[0,  120,0]},
                                     box:{pos:[0,120,0],scale:[1,1,1],},
                                     color:0x9999ff,
                                 },
 								{
-                                    img:"img/grad1.jpg",
+                                    img:"./img/grad1.jpg",
                                     wireframe:false,
                                     camera:{pos:[0,  120,15]},
                                     box:{pos:[0,120,0],scale:[1,1,1],},
@@ -1080,7 +1080,7 @@ THREE_OBJLoader.prototype = {
                                 We Do:
 
                                 Scripting & Storyboard
-                                Design & 3D Modeling (Sculpting)
+                                Design & 3D Sculpting
                                 Texturing & Lighting
                                 Rigging & Animation
                                 Rendering & Compositing
@@ -1124,7 +1124,7 @@ THREE_OBJLoader.prototype = {
                                 Bussiness, Idea
                                 Profile, Style...`, {
                                 font: font,
-                                size: 8,
+                                size: 4,
                                 height: 0.2,
                                 // curveSegments: 2,
                                 // bevelEnabled: true,
@@ -1135,12 +1135,12 @@ THREE_OBJLoader.prototype = {
                             } );
                             const textobject = new THREE.Mesh( textgeometry, new THREE.MeshLambertMaterial( { color: 0xffffff } ) );
 
-                            textobject.position.x = -70
+                            textobject.position.x = -50
                             // textobject.position.y = 20
-                            textobject.position.z = -375
+                            textobject.position.z = -320
                             // textobject.position.x = 63
                             // textobject.position.z = -30
-                            textobject.position.y = 5
+                            textobject.position.y = 12
                             // textobject.rotation.z = Math.PI/2
                             // textobject.rotation.x = -60
                             textobject.rotation.y = -Math.PI/4
@@ -1189,7 +1189,7 @@ THREE_OBJLoader.prototype = {
 					// const geometry = new THREE.BoxGeometry( 5, 2, 0.5+i/3 );
                     const geometry = new THREE.BoxGeometry( colors[i].box.scale[0],colors[i].box.scale[1],colors[i].box.scale[2] );
 
-					const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial({ wireframe: colors[i].wireframe, map: THREE.ImageUtils.loadTexture(`./img/grad${i+1}.jpg`) }) );
+					const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial({ wireframe: colors[i].wireframe, map: THREE.ImageUtils.loadTexture(colors[i].img) }) );
 
 					object.position.z = (-90*i) + colors[i].box.pos[2]
                     object.position.y = colors[i].box.pos[1]
