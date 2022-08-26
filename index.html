@@ -834,8 +834,14 @@ THREE_OBJLoader.prototype = {
                 sceness.forEach(function(adomscene) {
                   // adomscene is the current element
                   adomscene.onclick = function(e) {
-                    SELECTED = scene.children[parseInt(e.currentTarget.id.replace("scene",""))+1]
-                        camera.lookAt( SELECTED.position );
+                    let theIndex = parseInt(e.currentTarget.id.replace("scene",""))
+                    SELECTED = scene.children[theIndex+1]
+                    
+                    camera.lookAt(
+                        SELECTED.position.x + colors[theIndex].camera.lookAt[0],
+                        SELECTED.position.y + colors[theIndex].camera.lookAt[1],
+                        SELECTED.position.z + colors[theIndex].camera.lookAt[2]
+                    )
                     // $('.item').removeClass('scene-carousel-fix');
                     // $('.scene-backdrop').css('display','none')
                     // $('.quickview-scene').css('display','none');
@@ -913,77 +919,77 @@ THREE_OBJLoader.prototype = {
                                 {
                                     img:"./img/grad1.jpg",
                                     wireframe:false,
-                                    camera:{pos:[20 ,5,15]},
+                                    camera:{pos:[20 ,5,15],lookAt:[0,0,0]},
                                     box:{pos:[0,0,0],scale:[5,2,1],rot:[0,0,0],},
                                     color:0xff9999,
                                 },
                                 {
                                     img:"./img/grrrid.jpg",
                                     wireframe:false,
-                                    camera:{pos:[40 ,5,-27]},
-                                    box:{pos:[22, -6,0],scale:[3,0.1,10],rot:[0,0,3],},
+                                    camera:{pos:[40 ,5,-27],lookAt:[0,10,0]},
+                                    box:{pos:[22, -10,0],scale:[2,0.1,6],rot:[0,0,(3.14/4)*3],},
                                     color:0xff9999,
                                 },
 								{
                                     img:"./img/grad3.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0 ,-1,0]},
+                                    camera:{pos:[0 ,-1,0],lookAt:[0,0,0]},
                                     box:{pos:[0,10,0],scale:[6,7,0.3],rot:[0,0,0],},
                                     color:0xffcc99,
                                 },
 								{
                                     img:"./img/grad4.jpg",
                                     wireframe:false,
-                                    camera:{pos:[-25,-15,-10]},
+                                    camera:{pos:[-25,-15,-10],lookAt:[0,0,0]},
                                     box:{pos:[0,0,0],scale:[0.5,0.1,0.5],rot:[0.0,0,0],},
                                     color:0xffff99,
                                 },
 								{
                                     img:"./img/grad5.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0,-30,50]},
+                                    camera:{pos:[0,-30,50],lookAt:[0,0,0]},
                                     box:{pos:[0,40,-50],scale:[4,0.5,4],rot:[0,0,0],},
                                     color:0xccff99,
                                 },
 								{
                                     img:"./img/grad6.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0,  50,0]},
+                                    camera:{pos:[0,  50,0],lookAt:[0,0,0]},
                                     box:{pos:[0,80,0],scale:[1,1,1],rot:[0,0,0],},
                                     color:0x99ffcc,
                                 },
 								{
                                     img:"./img/grad1.jpg",
                                     wireframe:true,
-                                    camera:{pos:[0,  -6,0]},
+                                    camera:{pos:[0,  -6,0],lookAt:[0,0,0]},
                                     box:{pos:[0,120,0],scale:[1,1,1],rot:[0,0,0],},
                                     color:0x99ccff,
                                 },
 								{
                                     img:"./img/grad1.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0,  120,0]},
+                                    camera:{pos:[0,  120,0],lookAt:[0,0,0]},
                                     box:{pos:[0,120,0],scale:[1,1,1],rot:[0,0,0],},
                                     color:0x9999ff,
                                 },
 								{
                                     img:"./img/grad1.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0,  120,15]},
+                                    camera:{pos:[0,  120,15],lookAt:[0,0,0]},
                                     box:{pos:[0,120,0],scale:[1,1,1],rot:[0,0,0],},
                                     color:0xcc99ff,
                                 },
 								{
                                     img:"img/grad1.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0,  120,0]},
+                                    camera:{pos:[0,  120,0],lookAt:[0,0,0]},
                                     box:{pos:[0,120,0],scale:[1,1,1],rot:[0,0,0],},
                                     color:0xff99ff,
                                 },
 								{
                                     img:"img/grad1.jpg",
                                     wireframe:false,
-                                    camera:{pos:[0,  120,0]},
+                                    camera:{pos:[0,  120,0],lookAt:[0,0,0]},
                                     box:{pos:[0,120,0],scale:[1,1,1],rot:[0,0,0],},
                                     color:0xff99cc
                                     ,}
@@ -1384,7 +1390,7 @@ THREE_OBJLoader.prototype = {
                             camera.position.x = lerp(camera.position.x ,colors[-(Math.floor(SELECTED.position.z/90))].camera.pos[0],.05)
                             camera.position.y = lerp(camera.position.y ,colors[parseInt(-(Math.floor(SELECTED.position.z/90)))].camera.pos[1],.05)
 						}
-						camera.lookAt( SELECTED.position.x, SELECTED.position.y-10, SELECTED.position.z   );
+						camera.lookAt( SELECTED.position.x, SELECTED.position.y+colors[parseInt(-(Math.floor(SELECTED.position.z/90)))].camera.lookAt[1], SELECTED.position.z   );
 					} else {
 					}
 						camera.position.y = camera.position.y+ Math.sin(totalTimeElapsed/20)/80
