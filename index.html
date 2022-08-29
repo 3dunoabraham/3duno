@@ -917,7 +917,7 @@ THREE_OBJLoader.prototype = {
 
 				colors = [
                                 {
-                                    img:"./img/grad1.jpg",
+                                    img:"./img/th-2630613158.jpg",
                                     wireframe:false,
                                     camera:{pos:[20 ,5,15],lookAt:[0,0,0]},
                                     box:{pos:[0,0,0],scale:[5,2,1],rot:[0,0,0],},
@@ -931,24 +931,24 @@ THREE_OBJLoader.prototype = {
                                     color:0xff9999,
                                 },
 								{
-                                    img:"./img/grad3.jpg",
+                                    img:"./img/th-1084040338.jpg",
                                     wireframe:false,
                                     camera:{pos:[0 ,-1,0],lookAt:[0,0,0]},
-                                    box:{pos:[0,10,0],scale:[6,7,0.3],rot:[0,0,0],},
+                                    box:{pos:[0,10,0],scale:[7,7,0.3],rot:[0,0,0],},
                                     color:0xffcc99,
                                 },
 								{
-                                    img:"./img/grad4.jpg",
+                                    img:"./img/th-813177686.jpg",
                                     wireframe:false,
                                     camera:{pos:[-25,-15,-10],lookAt:[0,0,0]},
-                                    box:{pos:[0,0,0],scale:[0.5,0.1,0.5],rot:[0.0,0,0],},
+                                    box:{pos:[0,0,0],scale:[1,2,1],rot:[0.0,0,0],},
                                     color:0xffff99,
                                 },
 								{
                                     img:"./img/grad5.jpg",
                                     wireframe:false,
                                     camera:{pos:[0,-30,50],lookAt:[0,0,0]},
-                                    box:{pos:[0,40,-50],scale:[4,0.5,4],rot:[0,0,0],},
+                                    box:{pos:[0,40,-50],scale:[7,0.5,4.6],rot:[0,0,0],},
                                     color:0xccff99,
                                 },
 								{
@@ -997,33 +997,93 @@ THREE_OBJLoader.prototype = {
 
 				var objloader = new THREE_OBJLoader();
 				let teslaT;
-				// objloader.load( './models/camera.obj', function ( object ) {
-				//   // Store.state.scene.add( cube );
-			 //   //    object.rotation.z = Math.PI;
-			 //      object.scale.set(6,6,6)
-			 //   		console.log(object)
-			 //   		// object.rotation.x += Math.PI / 2
-			 //   		// object.rotation.y += Math.PI / 2
-			 //   		// object.rotation.y = Math.PI / 2
-    //                 object.position.x = 10
-			 //   		object.position.z = -117
-			 //   		object.position.y = 3
-			 //   		object.castShadow = true
+                objloader.load( './models/camera.obj', function ( object ) {
+                  // Store.state.scene.add( cube );
+               //    object.rotation.z = Math.PI;
+                  object.scale.set(6,6,6)
+                    console.log(object)
+                    object.rotation.x = Math.PI / 8
+                    // object.rotation.z -= Math.PI / 4
+                    object.rotation.y += Math.PI / 4 * 1.6
+                    // object.rotation.y = Math.PI / 2
+                    object.position.x = -24
+                    object.position.z = -168
+                    object.position.y = -3
+                    object.castShadow = true
 
-				// 	// let material = new THREE.MeshLambertMaterial({ color: 0xffaa00 });
+                    // let material = new THREE.MeshLambertMaterial({ color: 0xffaa00 });
 
-    //                 object.traverse( function (child)
-    //                 {
-    //                     if ( child instanceof THREE.Mesh )
-    //                     {
-    //                         child.material = new THREE.MeshLambertMaterial({ color: 0xffaa00 })
-    //                     }
-    //                 });
-				// 	// teslaT = new THREE.Mesh( object, material );
-				// 	// teslaT = object
-			 //        scene.add( object );
-			 //      // document.querySelector('h1').style.display = 'none';
-			 //    } );
+                    object.traverse( function (child)
+                    {
+                        if ( child instanceof THREE.Mesh )
+                        {
+                            child.material = new THREE.MeshLambertMaterial({ color: 0xffaa00 })
+                        }
+                    });
+                    // teslaT = new THREE.Mesh( object, material );
+                    // teslaT = object
+                    scene.add( object );
+                  // document.querySelector('h1').style.display = 'none';
+                } );
+                objloader.load( './models/building1.obj', function ( object ) {
+                  // Store.state.scene.add( cube );
+               //    object.rotation.z = Math.PI;
+                  object.scale.set(0.005,0.005,0.005)
+                    console.log(object)
+                    // object.rotation.x = Math.PI / 8
+                    // object.rotation.z -= Math.PI / 4
+                    // object.rotation.y += Math.PI / 4 * 1.6
+                    // object.rotation.y = Math.PI / 2
+                    object.position.x = 24
+                    object.position.z = -280
+                    object.position.y = -40
+                    // object.position.y = 5   
+                    object.castShadow = true
+
+                    // let material = new THREE.MeshLambertMaterial({ color: 0xffaa00 });
+
+                    object.traverse( function (child)
+                    {
+                        if ( child instanceof THREE.Mesh )
+                        {
+                            child.material = new THREE.MeshLambertMaterial({ color: 0x666666 })
+                        }
+                    });
+                    // teslaT = new THREE.Mesh( object, material );
+                    // teslaT = object
+                    scene.add( object );
+                  // document.querySelector('h1').style.display = 'none';
+                } );
+
+                objloader.load( './models/city1.obj', function ( object ) {
+                  // Store.state.scene.add( cube );
+               //    object.rotation.z = Math.PI;
+                  object.scale.set(0.0015,0.0015,0.0015)
+                    console.log(object)
+                    object.rotation.y -= Math.PI / 3
+                    // object.rotation.z -= Math.PI / 4
+                    // object.rotation.y += Math.PI / 4 * 1.6
+                    // object.rotation.y = Math.PI / 2
+                    object.position.x = -5
+                    object.position.z = -410
+                    object.position.y = 40.5
+                    // object.position.y = 5   
+                    object.castShadow = true
+
+                    // let material = new THREE.MeshLambertMaterial({ color: 0xffaa00 });
+
+                    object.traverse( function (child)
+                    {
+                        if ( child instanceof THREE.Mesh )
+                        {
+                            child.material = new THREE.MeshLambertMaterial({ color: 0xcccccc })
+                        }
+                    });
+                    // teslaT = new THREE.Mesh( object, material );
+                    // teslaT = object
+                    scene.add( object );
+                  // document.querySelector('h1').style.display = 'none';
+                } );
 
 
 				const ffontLoader = new THREE.FontLoader();
@@ -1050,7 +1110,7 @@ THREE_OBJLoader.prototype = {
                 {
                     ffontLoader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
                             let textgeometry = new THREE.TextGeometry( `
-                                Modeling & Rendering for:
+                                2) Modeling & Rendering for:
 
                                 Characters & People
                                 Games & Films
@@ -1086,7 +1146,7 @@ THREE_OBJLoader.prototype = {
                 {
                     ffontLoader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
                             let textgeometry = new THREE.TextGeometry( `
-                                We Do:
+                                3) We Do:
 
                                 Scripting & Storyboard
                                 Design & Modeling & Sculpting
@@ -1111,7 +1171,7 @@ THREE_OBJLoader.prototype = {
                             textobject.position.z = -175
                             textobject.position.x = -31
                             // textobject.position.z = -30
-                            textobject.position.y = 14
+                            textobject.position.y = 18
                             // textobject.rotation.z = Math.PI/2
                             // textobject.rotation.x = -60
                             // textobject.rotation.y = Math.PI/2
@@ -1133,7 +1193,7 @@ THREE_OBJLoader.prototype = {
                                 // with a 3D Website
                                 // or 3D Online Gallery`
                                 `
-                                We use Blender,
+                                4) We use Blender,
                                 ZBrush & Sculptris
                                 GIMP, PS, AE
                                 Mixamo, Cinema 4D,
@@ -1141,7 +1201,7 @@ THREE_OBJLoader.prototype = {
                                 React, Vue, Web3`
                                 , {
                                 font: font,
-                                size: 2,
+                                size: 1.9,
                                 height: 0.2,
                                 // curveSegments: 2,
                                 // bevelEnabled: true,
@@ -1152,11 +1212,11 @@ THREE_OBJLoader.prototype = {
                             } );
                             const textobject = new THREE.Mesh( textgeometry, new THREE.MeshLambertMaterial( { color: 0xffffff } ) );
 
-                            textobject.position.x = -31                            // textobject.position.y = 20
+                            textobject.position.x = -30                            // textobject.position.y = 20
                             textobject.position.z = -290
                             // textobject.position.x = 63
                             // textobject.position.z = -30
-                            textobject.position.y = -4
+                            textobject.position.y = -5
                             // textobject.rotation.z = Math.PI/2
                             // textobject.rotation.x = -60
                             textobject.rotation.y = -Math.PI/4
@@ -1171,7 +1231,7 @@ THREE_OBJLoader.prototype = {
                 {
                     ffontLoader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
                             let textgeometry = new THREE.TextGeometry( `
-                                Click the Floor
+                                5) Click the Floor
                                 to
                                 Contact Us
                                 `, {
@@ -1192,7 +1252,8 @@ THREE_OBJLoader.prototype = {
                             textobject.position.z = -420
                             // textobject.position.x = 63
                             // textobject.position.z = -30
-                            textobject.position.y = 55
+                            textobject.position.y = 72
+                            // textobject.position.y = 55
                             // textobject.rotation.z = Math.PI/2
                             // textobject.rotation.x = -60
                             // textobject.rotation.y = -Math.PI/4
