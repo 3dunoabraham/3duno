@@ -21,17 +21,51 @@
 				padding: 10px;
 				letter-spacing: 5px;
 			}
+            .amodalscreen > div {
+                width: 100vw;
+                height: 90vw;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+            }
+            .tx-white {
+                color: white;
+            }
 		</style>
 	</head>
 	<body>
-        <div class="flex-column ml-4" style="position: fixed; top: 0;padding-top: 25px">
-            <div id="modal1" class="amodalscreen none">modal1</div>
-            <div id="modal2" class="amodalscreen none">modal2</div>
-            <div id="modal3" class="amodalscreen none">modal3</div>
-            <div id="modal4" class="amodalscreen none">modal4</div>
-            <div id="modal5" class="amodalscreen none">modal5</div>
-            <div id="modal6" class="amodalscreen none">modal6</div>
-            <div id="modal7" class="amodalscreen none">modal7</div>
+        <div class="flex-column " style="position: fixed; top: 0;padding-top: 25px">
+            <div id="modal1" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                <div>
+                    <h1 class="tx-xl tx-ls-3 tx-white">PORTFOLIO </h1>
+                    <a class=" py-4 tx-xl" href="https://dunoabraham.artstation.com/" target="_blank">artstation @dunoabraham</a>
+                    <a class=" py-4 tx-xl" href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">youtube @3duno</a>
+                </div>
+            </div>
+            <div id="modal2" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                <div>
+                    <h1 class="tx-xl tx-ls-3 tx-white">RELATED PORTFOLIOS </h1>
+                    <a class=" py-4 tx-xl" href="https://tresduno.vercel.app/" target="_blank">tresduno</a>
+                    <a class=" py-4 tx-xl" href="https://tresweb.vercel.app/" target="_blank">tresweb</a>
+                    <a class=" py-4 tx-xl" href="https://abrahamduno.vercel.app/" target="_blank">Abraham Duno</a>
+                </div>
+            </div>
+            <div id="modal3" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                <div>
+                    <h1 class="tx-xl tx-ls-3 tx-white">LINKS & RESOURCES </h1>
+                    <a class=" py-4 tx-xl" href="https://www.blender.org" target="_blank">blender</a>
+                </div>
+            </div>
+            <div id="modal5" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                <div>
+                    <h1 class="tx-xl tx-ls-3 tx-white">Contact Us </h1>
+                    <a class=" py-4 tx-xl" href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">youtube @3duno</a>
+                    <a class=" py-4 tx-xl" href="https://www.instagram.com/3duno/" target="_blank">instagram @3duno</a>
+                    <a class=" py-4 tx-xl" href="https://dunoabraham.artstation.com/" target="_blank">artstation @dunoabraham</a>
+                    <a class=" py-4 tx-xl" href="mailto:tresduno@gmail.com" target="_blank">email tresduno@gmail.com</a>
+                </div>
+            </div>
         </div>
         <div class="flex-column" style="position: fixed; bottom: 0;padding-bottom: 25px; width: 96vw; margin-left: 2%;">
             <div class="w-100" style="background: linear-gradient(-90deg, #00000077, #ffffff44); height: 10px; transform: translateY(40px);position: relative;">
@@ -917,7 +951,7 @@ THREE_OBJLoader.prototype = {
 
 				colors = [
                                 {
-                                    img:"./img/th-2630613158.jpg",
+                                    img:"./img/wp2100821-1187062037.jpg",
                                     wireframe:false,
                                     camera:{pos:[20 ,5,15],lookAt:[0,0,0]},
                                     box:{pos:[0,0,0],scale:[5,2,1],rot:[0,0,0],},

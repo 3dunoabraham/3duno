@@ -17,6 +17,13 @@ body {
 	font-size: 2em;
 	text-shadow: 2px 2px 2px #00000077;
 }
+/*.amodalscreen {
+	width: 100vw;
+	height: 90vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}*/
 a {
 	color: #ff0;
 	text-decoration: none;
