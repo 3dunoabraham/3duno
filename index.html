@@ -894,10 +894,10 @@ THREE_OBJLoader.prototype = {
 				})
 
 				container = document.createElement( 'div' );
-				orangeDOM = document.createElement( 'div' );
-				orangeDOM.className = "orangeDOM"
+				// orangeDOM = document.createElement( 'div' );
+				// orangeDOM.className = "orangeDOM"
 				// container.appendChild( orangeDOM );
-				// document.body.appendChild( container );
+				document.body.appendChild( container );
 
 				camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 0.1, 10000 );
 				// camera.position.y = 30
@@ -1109,9 +1109,9 @@ THREE_OBJLoader.prototype = {
                             // textobject.position.x = 20
                             // textobject.position.y = 20
                             textobject.position.z = -175
-                            textobject.position.x = -42
+                            textobject.position.x = -32
                             // textobject.position.z = -30
-                            textobject.position.y = 20
+                            textobject.position.y = 14
                             // textobject.rotation.z = Math.PI/2
                             // textobject.rotation.x = -60
                             // textobject.rotation.y = Math.PI/2
@@ -1368,8 +1368,7 @@ THREE_OBJLoader.prototype = {
 					if (orange)
 					{
 						orangeLevel -= parseInt(orangeLevel / 2)
-      //                   orangeDOM.innerHTML = orangeLevel
-						// orangeDOM.innerHTML = ""
+						// orangeDOM.innerHTML = orangeLevel
 					}
 					orange = false
 					
