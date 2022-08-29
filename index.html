@@ -3,6 +3,9 @@
 	<head>
 		<title>3duno</title>
 		<meta charset="utf-8">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link type="text/css" rel="stylesheet" href="css/main.css">
 		<link type="text/css" rel="stylesheet" href="css/spirit.css">
@@ -23,11 +26,32 @@
 			}
             .amodalscreen > div {
                 width: 100vw;
-                height: 90vw;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 flex-direction: column;
+            }
+            @media only screen and (min-width: 577px)
+            {
+                .amodalscreen > div a {
+                    font-size: 2.5em;
+                }
+                .amodalscreen > div h1 {
+                    font-size: 2.2em;
+                }
+            }
+            @media only screen and (max-width: 576px)
+            {
+                .amodalscreen > div a {
+                    font-size: 1.7em;
+                }
+                .amodalscreen > div h1 {
+                    font-size: 1.5em;
+                }
             }
             .tx-white {
                 color: white;
@@ -36,34 +60,34 @@
 	</head>
 	<body>
         <div class="flex-column " style="position: fixed; top: 0;padding-top: 25px">
-            <div id="modal1" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
-                <div>
-                    <h1 class="tx-xl tx-ls-3 tx-white">PORTFOLIO </h1>
-                    <a class=" py-4 tx-xl" href="https://dunoabraham.artstation.com/" target="_blank">artstation @dunoabraham</a>
-                    <a class=" py-4 tx-xl" href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">youtube @3duno</a>
+            <div id="modal1" class="amodalscreen none">
+                <div style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                    <h1 class="flex-start tx-ls-3 tx-white mb-8">PORTFOLIO  <span class="pa-3 tx-xl opacity-hover-50 clickable selfCloseButton block ">x</span></h1>
+                    <a class=" py-4 " href="https://dunoabraham.artstation.com/" target="_blank">artstation @dunoabraham</a>
+                    <a class=" py-4 " href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">youtube @3duno</a>
                 </div>
             </div>
-            <div id="modal2" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
-                <div>
-                    <h1 class="tx-xl tx-ls-3 tx-white">RELATED PORTFOLIOS </h1>
-                    <a class=" py-4 tx-xl" href="https://tresduno.vercel.app/" target="_blank">tresduno</a>
-                    <a class=" py-4 tx-xl" href="https://tresweb.vercel.app/" target="_blank">tresweb</a>
-                    <a class=" py-4 tx-xl" href="https://abrahamduno.vercel.app/" target="_blank">Abraham Duno</a>
+            <div id="modal2" class="amodalscreen none">
+                <div style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                    <h1 class="flex-start tx-ls-3 tx-white mb-8">RELATED PORTFOLIOS  <span class="pa-3 tx-xl opacity-hover-50 clickable selfCloseButton block ">x</span></h1>
+                    <a class=" py-4 " href="https://tresduno.vercel.app/" target="_blank">tresduno</a>
+                    <a class=" py-4 " href="https://tresweb.vercel.app/" target="_blank">tresweb</a>
+                    <a class=" py-4 " href="https://abrahamduno.vercel.app/" target="_blank">Abraham Duno</a>
                 </div>
             </div>
-            <div id="modal3" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
-                <div>
-                    <h1 class="tx-xl tx-ls-3 tx-white">LINKS & RESOURCES </h1>
-                    <a class=" py-4 tx-xl" href="https://www.blender.org" target="_blank">blender</a>
+            <div id="modal3" class="amodalscreen none">
+                <div style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                    <h1 class="flex-start tx-ls-3 tx-white mb-8">LINKS & RESOURCES  <span class="pa-3 tx-xl opacity-hover-50 clickable selfCloseButton block ">x</span></h1>
+                    <a class=" py-4 " href="https://www.blender.org" target="_blank">blender</a>
                 </div>
             </div>
-            <div id="modal5" class="amodalscreen none" style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
-                <div>
-                    <h1 class="tx-xl tx-ls-3 tx-white">Contact Us </h1>
-                    <a class=" py-4 tx-xl" href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">youtube @3duno</a>
-                    <a class=" py-4 tx-xl" href="https://www.instagram.com/3duno/" target="_blank">instagram @3duno</a>
-                    <a class=" py-4 tx-xl" href="https://dunoabraham.artstation.com/" target="_blank">artstation @dunoabraham</a>
-                    <a class=" py-4 tx-xl" href="mailto:tresduno@gmail.com" target="_blank">email tresduno@gmail.com</a>
+            <div id="modal5" class="amodalscreen none">
+                <div style="background: linear-gradient(-15deg, #00000000 0%, #000000aa 50%, #111111 75%)">
+                    <h1 class="flex-start tx-ls-3 tx-white mb-8">CONTACT US  <span class="pa-3 tx-xl opacity-hover-50 clickable selfCloseButton block ">x</span></h1>
+                    <a class=" py-4 " href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">youtube @3duno</a>
+                    <a class=" py-4 " href="https://www.instagram.com/3duno/" target="_blank">instagram @3duno</a>
+                    <a class=" py-4 " href="https://dunoabraham.artstation.com/" target="_blank">artstation @dunoabraham</a>
+                    <a class=" py-4 " href="mailto:tresduno@gmail.com" target="_blank">email tresduno@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -864,18 +888,47 @@ THREE_OBJLoader.prototype = {
 			animate();
 
 			function init() {
+                var closes = document.querySelectorAll('.selfCloseButton')
+                closes.forEach(function(adombutton) {
+                  // adombutton is the current element
+                  adombutton.onclick = function(e) {
+                    console.log("e.currentTarget.parentNode.parentNode",e.currentTarget.parentNode.parentNode.parentNode)
+                        e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("none")
+                        // document.getElementById("modal"+(-(Math.floor(CLICKED.position.z/90)))).classList.toggle("none")
+                    // }
+                  }
+                })
                 var sceness = document.querySelectorAll('.scene-goto')
                 sceness.forEach(function(adomscene) {
                   // adomscene is the current element
                   adomscene.onclick = function(e) {
                     let theIndex = parseInt(e.currentTarget.id.replace("scene",""))
-                    SELECTED = scene.children[theIndex+1]
+                    console.log("CLICKED DOM BUTTON", theIndex)
+                    SELECTED =  {...scene.children[theIndex+1]}
+                    CLICKED =   {...scene.children[theIndex+1]}
+                    INTERSECTED =   {...scene.children[theIndex+1]}
                     
                     camera.lookAt(
                         SELECTED.position.x + colors[theIndex].camera.lookAt[0],
                         SELECTED.position.y + colors[theIndex].camera.lookAt[1],
                         SELECTED.position.z + colors[theIndex].camera.lookAt[2]
                     )
+
+                    var sceness = document.querySelectorAll('.amodalscreen')
+                    sceness.forEach(function(adomscene) {
+                        // console.log(adomscene)
+                        if ("modal"+(-(Math.floor(CLICKED.position.z/90))) != adomscene.id)
+                        {
+                            adomscene.className += " none"
+                        } else {
+                            // console.log(adomscene)
+                        }
+                    })
+                    if ( document.getElementById("modal"+(-(Math.floor(CLICKED.position.z/90)))) )
+                    {
+                        document.getElementById("modal"+(-(Math.floor(CLICKED.position.z/90)))).classList.toggle("none")
+                    }
+
                     // $('.item').removeClass('scene-carousel-fix');
                     // $('.scene-backdrop').css('display','none')
                     // $('.quickview-scene').css('display','none');
@@ -886,46 +939,64 @@ THREE_OBJLoader.prototype = {
                 //     console.log(scene.children)
                 //     SELECTED = scene.children[5]
                 // })
-				document.addEventListener("click", (e) => {
-					if (INTERSECTED && Math.floor(INTERSECTED.position.y) == 0)
-					{
-						// INTERSECTED.position.y = -2
+				
 
-						// console.log(window.location.href)
-						// alert(orangeLevel)
-					}
-					if (INTERSECTED) {
-						// camera.lookAt( INTERSECTED.position );
-						CLICKED = {...INTERSECTED}
 
-						if (CLICKED) {
 
-                            console.log("CLICKED.position.z", CLICKED.position.z)
-                            console.log(Math.floor(CLICKED.position.z/90))
 
-                            var sceness = document.querySelectorAll('.amodalscreen')
-                            sceness.forEach(function(adomscene) {
-                                // console.log(adomscene)
-                                if ("modal"+(-(Math.floor(CLICKED.position.z/90))) != adomscene.id)
-                                {
-                                    adomscene.className += " none"
-                                } else {
-                                    // console.log(adomscene)
-                                }
-                            })
-                            document.getElementById("modal"+(-(Math.floor(CLICKED.position.z/90)))).classList.toggle("none")
-                            SELECTED = {...CLICKED}
-							// console.log(SELECTED.position.z/30)
 
-							// camera.position.y = SELECTED.position.y + 15
-							// camera.position.y = lerp(
-							// 	camera.position.y,
-							// 	SELECTED.position.y + 15,
-							// 	0.5) + Math.sin(totalTimeElapsed/20)/80
-							// camera.position.z = SELECTED.position.z + 30
-						}
-					}
-				})
+
+
+
+    //             document.addEventListener("click", (e) => {
+				// 	if (INTERSECTED && Math.floor(INTERSECTED.position.y) == 0)
+				// 	{
+				// 		// INTERSECTED.position.y = -2
+
+				// 		// console.log(window.location.href)
+				// 		// alert(orangeLevel)
+				// 	}
+				// 	if (INTERSECTED) {
+				// 		// camera.lookAt( INTERSECTED.position );
+				// 		CLICKED = {...INTERSECTED}
+
+				// 		if (CLICKED) {
+
+    //                         console.log("CLICKED.position.z", CLICKED.position.z)
+    //                         console.log(Math.floor(CLICKED.position.z/90))
+
+    //                         var sceness = document.querySelectorAll('.amodalscreen')
+    //                         sceness.forEach(function(adomscene) {
+    //                             // console.log(adomscene)
+    //                             if ("modal"+(-(Math.floor(CLICKED.position.z/90))) != adomscene.id)
+    //                             {
+    //                                 adomscene.className += " none"
+    //                             } else {
+    //                                 // console.log(adomscene)
+    //                             }
+    //                         })
+    //                         if ( document.getElementById("modal"+(-(Math.floor(CLICKED.position.z/90)))) )
+    //                         {
+    //                             document.getElementById("modal"+(-(Math.floor(CLICKED.position.z/90)))).classList.toggle("none")
+    //                         }
+    //                         SELECTED = {...CLICKED}
+				// 			// console.log(SELECTED.position.z/30)
+
+				// 			// camera.position.y = SELECTED.position.y + 15
+				// 			// camera.position.y = lerp(
+				// 			// 	camera.position.y,
+				// 			// 	SELECTED.position.y + 15,
+				// 			// 	0.5) + Math.sin(totalTimeElapsed/20)/80
+				// 			// camera.position.z = SELECTED.position.z + 30
+				// 		}
+				// 	}
+				// })
+
+
+
+
+
+
 
 				container = document.createElement( 'div' );
 				// orangeDOM = document.createElement( 'div' );
@@ -1404,6 +1475,7 @@ THREE_OBJLoader.prototype = {
 			function render() {
 				if (orange)
 				{
+                            console.log("INTERSECTED raytrace")
 					let asd = parseInt(INTERSECTED.id)
 					// camera.position.set( INTERSECTED.position  );
 
