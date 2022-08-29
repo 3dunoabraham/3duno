@@ -33,17 +33,17 @@
             <div id="modal6" class="amodalscreen none">modal6</div>
             <div id="modal7" class="amodalscreen none">modal7</div>
         </div>
-        <div class="flex-column" style="position: fixed; bottom: 0;padding-bottom: 25px; width: 90vw; margin-left: 5%;">
-            <div class="w-100" style="background: #00000077; height: 10px; transform: translateY(40px);position: relative;">
+        <div class="flex-column" style="position: fixed; bottom: 0;padding-bottom: 25px; width: 96vw; margin-left: 2%;">
+            <div class="w-100" style="background: linear-gradient(-90deg, #00000077, #ffffff44); height: 10px; transform: translateY(40px);position: relative;">
                 
             </div>
             <div class="flex-between w-100 " >
-                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-5 border-r-50 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene1">1</button>
-                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-5 border-r-50 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene2">2</button>
-                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-5 border-r-50 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene3">3</button>
+                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-4 border-r-50 opacity-hover-50 scene-goto" style="background: #ffffff44;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene1">1</button>
+                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-4 border-r-50 opacity-hover-50 scene-goto" style="background: #ffffff44;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene2">2</button>
+                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-4 border-r-50 opacity-hover-50 scene-goto" style="background: #ffffff44;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene3">3</button>
 
-                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-5 border-r-50 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene4">4</button>
-                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-5 border-r-50 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene5">5</button>
+                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-4 border-r-50 opacity-hover-50 scene-goto" style="background: #ffffff44;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene4">4</button>
+                <button class="ma-0 tx-ls-2 tx-xxl  clickable py-2 px-4 border-r-50 opacity-hover-50 scene-goto" style="background: #ffffff44;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene5">5</button>
                 <!-- <button class="ma-0 tx-ls-2 tx-xxl  clickable pa-3 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene6">6</button>
                 <button class="ma-0 tx-ls-2 tx-xxl  clickable pa-3 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene7">7</button>
                 <button class="ma-0 tx-ls-2 tx-xxl  clickable pa-3 opacity-hover-50 scene-goto" style="background: #00000077;border: none;text-shadow: 2px 3px #000000aa,  -2px 3px #00000077; color: #ccc" id="scene8">8</button> -->
@@ -997,33 +997,33 @@ THREE_OBJLoader.prototype = {
 
 				var objloader = new THREE_OBJLoader();
 				let teslaT;
-				objloader.load( './models/camera.obj', function ( object ) {
-				  // Store.state.scene.add( cube );
-			   //    object.rotation.z = Math.PI;
-			      object.scale.set(6,6,6)
-			   		console.log(object)
-			   		// object.rotation.x += Math.PI / 2
-			   		// object.rotation.y += Math.PI / 2
-			   		// object.rotation.y = Math.PI / 2
-                    object.position.x = 10
-			   		object.position.z = -117
-			   		object.position.y = 3
-			   		object.castShadow = true
+				// objloader.load( './models/camera.obj', function ( object ) {
+				//   // Store.state.scene.add( cube );
+			 //   //    object.rotation.z = Math.PI;
+			 //      object.scale.set(6,6,6)
+			 //   		console.log(object)
+			 //   		// object.rotation.x += Math.PI / 2
+			 //   		// object.rotation.y += Math.PI / 2
+			 //   		// object.rotation.y = Math.PI / 2
+    //                 object.position.x = 10
+			 //   		object.position.z = -117
+			 //   		object.position.y = 3
+			 //   		object.castShadow = true
 
-					// let material = new THREE.MeshLambertMaterial({ color: 0xffaa00 });
+				// 	// let material = new THREE.MeshLambertMaterial({ color: 0xffaa00 });
 
-                    object.traverse( function (child)
-                    {
-                        if ( child instanceof THREE.Mesh )
-                        {
-                            child.material = new THREE.MeshLambertMaterial({ color: 0xffaa00 })
-                        }
-                    });
-					// teslaT = new THREE.Mesh( object, material );
-					// teslaT = object
-			        scene.add( object );
-			      // document.querySelector('h1').style.display = 'none';
-			    } );
+    //                 object.traverse( function (child)
+    //                 {
+    //                     if ( child instanceof THREE.Mesh )
+    //                     {
+    //                         child.material = new THREE.MeshLambertMaterial({ color: 0xffaa00 })
+    //                     }
+    //                 });
+				// 	// teslaT = new THREE.Mesh( object, material );
+				// 	// teslaT = object
+			 //        scene.add( object );
+			 //      // document.querySelector('h1').style.display = 'none';
+			 //    } );
 
 
 				const ffontLoader = new THREE.FontLoader();
@@ -1089,12 +1089,11 @@ THREE_OBJLoader.prototype = {
                                 We Do:
 
                                 Scripting & Storyboard
-                                Design & 3D Sculpting
-                                Texturing & Lighting
-                                Rigging & Animation
+                                Design & Modeling & Sculpting
+                                Texturing & Lighting & Animation
                                 Rendering & Compositing
                                 Audio & Video Editig
-                                + Changes`, {
+                                3D Website Development`, {
                                 font: font,
                                 size: 1.5,
                                 height: 0.2,
@@ -1126,12 +1125,21 @@ THREE_OBJLoader.prototype = {
                 }
                 {
                     ffontLoader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
-                            let textgeometry = new THREE.TextGeometry( `
-                                Level Up your
+                            let textgeometry = new THREE.TextGeometry(
+                                // `
+                                // Level Up your
 
-                                Branding, Startup or Idea
-                                with a 3D Website
-                                or 3D Online Gallery`, {
+                                // Branding, Startup or Idea
+                                // with a 3D Website
+                                // or 3D Online Gallery`
+                                `
+                                We use Blender,
+                                ZBrush & Sculptris
+                                GIMP, PS, AE
+                                Mixamo, Cinema 4D,
+                                Three.js (WebGL)
+                                React, Vue, Web3`
+                                , {
                                 font: font,
                                 size: 2,
                                 height: 0.2,
@@ -1148,7 +1156,7 @@ THREE_OBJLoader.prototype = {
                             textobject.position.z = -290
                             // textobject.position.x = 63
                             // textobject.position.z = -30
-                            textobject.position.y = -8
+                            textobject.position.y = -4
                             // textobject.rotation.z = Math.PI/2
                             // textobject.rotation.x = -60
                             textobject.rotation.y = -Math.PI/4
