@@ -17,6 +17,10 @@
 			a {
 				color: #08f;
 			}
+            .mynewfont *,
+            .mynewfont {
+                font-family: Arial;
+            }
 			.orangeDOM {
 				position: fixed;
 				top: 0;
@@ -60,8 +64,17 @@
             .tx-white {
                 color: white;
             }
+            .tx-orange {
+                color: #fd8b46;
+            }
             .tx-shadow {
                 text-shadow: 4px 4px 2px #00000077;
+            }
+            .textBox {
+                background: linear-gradient(-45deg,#111111,#00000077);
+                box-shadow: 2px 2px 4px #00000077;
+                margin: 2px 0;
+                color: white;
             }
 		</style>
 	</head>
@@ -98,14 +111,23 @@
                 </div>
             </div>
             <div id="modal5" class="amodalscreen none">
-                <div style="background: linear-gradient(25deg, #00000000 25%, #44444477 55%, #11111177 75%, #111111 85%, #000000)">
+                <div class="" style="background: linear-gradient(25deg, #00000000 25%, #44444477 55%, #11111177 75%, #111111 85%, #000000)">
                     <h1 class="flex-start tx-ls-3 tx-white mb-8">ABOUT US  <span class="pa-3 tx-xl opacity-hover-50 clickable selfCloseButton block ">x</span></h1>
-                    <p class="pa-3" style="background: linear-gradient(-45deg,#111111,#00000077);box-shadow: 2px 2px 4px #00000077; margin: 2px 0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="flex-column">
+                        <span  class="tx-lg pa-4 mb-4 textBox">
+                            <span class="tx-orange">General Artist</span>
+                            with 5+ years of experience in modeling & sculpting, rigging and animation for characters, real state, motion graphics, games as well as web layout design and 3D web development
+                        </span>
+                        <!-- <hr class="opacity-50 my-8 w-50"> -->
+                        <ul class="px-8 py-4 textBox mynewfont">
+                            <li class="tx-orange">Expert in design and creation of characters, people and creatures</li>
+                            <li>Highly experienced in sculpting, modeling and texturing for games and 3d printing</li>
+                            <li class="tx-orange">Skilled in many areas of architectural design and real state rendering</li>
+                            <li>Proficient in several softwares like Blender, ZBrush and After Effects</li>
+                            <li class="tx-orange">Knowledgeable in 3D Web Design & Development for Web Apps & Games</li>
+                            <li>Excels at motion graphics design & production</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
