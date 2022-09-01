@@ -78,14 +78,14 @@ a, button, input, select {
 	background: rgba(0,0,0,0.7);
 }
 
-	#overlay button {
-		background: #ffffff;
-		border: 0;
-		color: #000000;
-		padding: 16px 20px;
-		text-transform: uppercase;
-		cursor: pointer;
-	}
+#overlay button {
+	background: #ffffff;
+	border: 0;
+	color: #000000;
+	padding: 16px 20px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
 
 #notSupported {
 	width: 50%;
@@ -93,4 +93,92 @@ a, button, input, select {
 	background-color: #f00;
 	margin-top: 20px;
 	padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	background-color: #f0f0f0;
+	color: #444;
+}
+a {
+	color: #08f;
+}
+.mynewfont *,
+.mynewfont {
+	font-family: Arial;
+}
+.orangeDOM {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	letter-spacing: 5px;
+}
+.amodalscreen > div {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	flex-direction: column;
+	padding-right: 20px;
+}
+@media only screen and (min-width: 577px)
+{
+	.amodalscreen > div a {
+		font-size: 2.5em;
+	}
+	.amodalscreen > div h1 {
+		font-size: 2.2em;
+	}
+}
+@media only screen and (max-width: 576px)
+{
+	.amodalscreen > div a {
+		font-size: 1.6em;
+	}
+	.amodalscreen > div h1 {
+		font-size: 1.5em;
+	}
+}
+.amodalscreen a {
+	text-shadow: 4px 4px 2px #00000077;
+}
+.tx-white {
+	color: white;
+}
+.tx-orange {
+	color: #fd8b46;
+}
+.tx-shadow {
+	text-shadow: 4px 4px 2px #00000077;
+}
+.textBox {
+	background: linear-gradient(-45deg,#111111,#00000077);
+	box-shadow: 2px 2px 4px #00000077;
+	margin: 2px 0;
+	color: white;
 }
