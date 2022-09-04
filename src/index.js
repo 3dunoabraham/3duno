@@ -26,6 +26,8 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import myFont from "./assets/fonts/helvetiker_bold.typeface.json";
 
+import RenderInBrowser from 'react-render-in-browser';
+
 
 import { UnrealBloomPass } from 'three-stdlib'
 
@@ -65,7 +67,7 @@ const CameraControls = () => {
 	// Get a reference to the Three.js Camera, and the canvas html element.
 	// We need these to setup the OrbitControls component.
 	// https://threejs.org/docs/#examples/en/controls/OrbitControls
-	const [mycounter, setCount] = useState(0)
+	// const [mycounter, setCount] = useState(0)
 	const {
 	  camera,
 	  gl: { domElement },
@@ -75,9 +77,9 @@ const CameraControls = () => {
 	useFrame((state) => {
 		// console.log("asd")
 		// console.log("asd", camera)
-		setCount(mycounter+1)
+		// setCount(mycounter+1)
 		// console.log(mycounter)
-		camera.position.x = Math.sin(mycounter * 0.002 ) * 2
+		// camera.position.x = Math.sin(mycounter * 0.002 ) * 2
 		controls.current.update()
 	});
 	return (
@@ -86,9 +88,9 @@ const CameraControls = () => {
 		  ref={controls}
 		  args={[camera, domElement]}
 		  enableZoom={true}
-		  minDistance={3}
+		  minDistance={4}
 		  maxDistance={12}
-		  maxPolarAngle={Math.PI/2 * 1.25}
+		  maxPolarAngle={Math.PI/2 * 1.5}
 		  minPolarAngle={0}
 		  />);
 	};
@@ -109,15 +111,32 @@ const CameraControls = () => {
 // }
 function BigBox() {
 	const [ref, api] = useBox(() => ({ mass: 0, position: [0, -2, 0], rotation: [0,0,0] }));
+	// const [mycounter, setCount] = useState(0)
+	// const controls = useRef();
+
+	// useFrame((state) => {
+	// 	// console.log("asd")
+	// 	// console.log("asd", camera)
+	// 	setCount(mycounter+1)
+	// 	ref.current.rotation.y = mycounter / 100
+	// 	if (controls.current)
+	// 		controls.current.update()
+
+	// 	// ref.current.rotation.y = Math.sin(mycounter * 0.002 ) * 2
+	// 	// console.log(mycounter)
+	// 	// ref.rotation.y = Math.sin(mycounter * 0.002 ) * 2
+		
+	// });
 	return (
 		<mesh
 			receiveShadow
 			ref={ref}
 			position={[0, 0, 0]}
 		>
-			<boxBufferGeometry attach="geometry" args={[5, 1, 5]} />
-			<meshStandardMaterial attach="material" color="red" />
+			<boxBufferGeometry attach="geometry" args={[3, 1, 3]} />
+			<meshStandardMaterial  attach="material" color="#f77b00" />
 		</mesh>
+
 	);
 }
 function Box() {
@@ -140,7 +159,7 @@ function Box() {
 			position={[0, 2, 0]}
 		>
 			<boxBufferGeometry attach="geometry" />
-			<meshStandardMaterial attach="material" color="hotpink" />
+			<meshStandardMaterial attach="material" color="#14accc" />
 		</mesh>
 	);
 }
@@ -245,10 +264,28 @@ createRoot(document.getElementById('root')).render(
 		penumbra={1}
 		/> */}
 
+
+
+		<mesh
+			position={[0, -2, 0]}
+		>
+			<boxBufferGeometry attach="geometry" args={[5, 1, 5]} />
+			<meshStandardMaterial wireframe  attach="material" color="red" />
+		</mesh>
+
           {/* <Bloom kernelSize={3} luminanceThreshold={0} luminanceSmoothing={0.1} intensity={0.3} /> */}
-		<EffectComposer multisampling={4}>
+
+
+      <RenderInBrowser except chrome>
+        <EffectComposer multisampling={4}>
           <Bloom kernelSize={1} luminanceThreshold={0} luminanceSmoothing={0} intensity={0.2} />
         </EffectComposer>
+      </RenderInBrowser>
+
+
+		{/*<EffectComposer multisampling={4}>
+          <Bloom kernelSize={1} luminanceThreshold={0} luminanceSmoothing={0} intensity={0.2} />
+        </EffectComposer>*/}
 
 {/* <Effects disableGamma>
         <unrealBloomPass threshold={1} strength={1.0} radius={0.5} />
