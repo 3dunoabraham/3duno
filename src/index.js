@@ -99,7 +99,7 @@ function AModalButton() {
         <p>Modeling, Sculpting, Texturing, Rigging & Animation (<small>Characters, Motion Graphics, Real State, Games, Films</small>)</p>
         
         <small> Full-Stack Software Design and 3D Web Development</small>
-        <hr/>
+        <hr style={{width:"50%"}}/>
 
         <div style={{display:"flex",flexWrap:"wrap",justifyContent:"flex-end",alignItems:"flex-end",alignSelf:"flex-end",flexDirection:"column"}}>
             <a href="https://duno.vercel.app/" target="_blank">
