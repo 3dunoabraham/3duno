@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -68,5 +69,8 @@ a {
   color: white;
 }
 h3 {
-  font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Bitter', serif;
+}
+h3:first-child {
+  /*font-family: 'Barlow Condensed', sans-serif;*/
 }
