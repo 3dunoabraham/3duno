@@ -92,11 +92,11 @@ function AModalButton() {
   </button>}
       <SimpleModal show={show} setShow={setShow}>
         <p style={{display:"flex",flexWrap:"wrap",justifyContent:"center",alignItems:"center"}}>
-        	<h3 style={{margin:0,color: "#ffae40"}}>General Artist</h3>
+        	<h3 style={{margin:0,color: "#ffb13e",letterSpacing:"2px"}} >General Artist</h3>
         	<span style={{padding: "0 20px"}}>&</span>
-        	<h3 style={{margin:0,color: "#78ced3"}}>Programmer</h3>
+        	<h3 style={{margin:0,color: "#57b9cf",letterSpacing:"2px"}}>Software Engineer</h3>
     	</p>
-        <p>Modeling, Sculpting, Texturing, Rigging & Animation (<small>Characters, Motion Graphics, Real State, Games, Films</small>)</p>
+        <p>Modeling, Sculpting, Texturing, Rigging & Animation (<small style={{letterSpacing:"2px"}}>Characters, Scenes, Motion Graphics, Architecture, Games, Films</small>)</p>
         
         <small> Full-Stack Software Design and 3D Web Development</small>
         <hr style={{width:"50%"}}/>
