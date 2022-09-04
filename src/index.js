@@ -15,7 +15,7 @@ import {
 	Effects,
 	useTexture } from "@react-three/drei";
 // import { OrbitControls } from "@react-three/drei";
-import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
+import { Physics, Debug , useBox, usePlane, useSphere } from "@react-three/cannon";
 import "./styles.css";
 
 // import AText from "./components/atext";
@@ -89,7 +89,7 @@ const CameraControls = () => {
 		  args={[camera, domElement]}
 		  enableZoom={true}
 		  minDistance={4}
-		  maxDistance={12}
+		  maxDistance={32}
 		  maxPolarAngle={Math.PI/2 * 1.5}
 		  minPolarAngle={0}
 		  />);
@@ -110,7 +110,7 @@ const CameraControls = () => {
 // 	);
 // }
 function BigBox() {
-	const [ref, api] = useBox(() => ({ mass: 0, position: [0, -2, 0], rotation: [0,0,0] }));
+	const [ref, api] = useBox(() => ({ mass: 0, position: [0, -2, 0], rotation: [0,0,0], args:[2, 1, 2]}));
 	// const [mycounter, setCount] = useState(0)
 	// const controls = useRef();
 
@@ -129,11 +129,12 @@ function BigBox() {
 	// });
 	return (
 		<mesh
+			castShadow
 			receiveShadow
 			ref={ref}
 			position={[0, 0, 0]}
 		>
-			<boxBufferGeometry attach="geometry" args={[3, 1, 3]} />
+			<boxBufferGeometry attach="geometry" args={[2, 1, 2]} />
 			<meshStandardMaterial  attach="material" color="#f77b00" />
 		</mesh>
 
@@ -151,9 +152,10 @@ function Box() {
 
 	return (
 		<mesh
+			receiveShadow
 			castShadow
 			onClick={() => {
-				api.velocity.set(0.25, 2, 0.25);
+				api.velocity.set(-0.25, 2, -0.25);
 			}}
 			ref={ref}
 			position={[0, 2, 0]}
@@ -164,6 +166,31 @@ function Box() {
 	);
 }
 
+function SmallBox() {
+	const [ref, api] = useBox(() => ({ mass: 0.1, position: [0, 8, 0], args:[0.5,0.5,0.5] }));
+
+	// useFrame(() => {
+	// 	if (!ref.current) {
+	// 		return;
+	// 	}
+	// 	ref.current.rotation.x += 1
+	// })
+
+	return (
+		<mesh
+			receiveShadow
+			castShadow
+			onClick={() => {
+				api.velocity.set(-0.25, 4, -0.25);
+			}}
+			ref={ref}
+			position={[0, 2, 0]}
+		>
+			<boxBufferGeometry attach="geometry" args={[0.5,0.5,0.5]} />
+			<meshStandardMaterial attach="material" color="#14accc" />
+		</mesh>
+	);
+}
 
 function Plane() {
 	const [ref] = usePlane(() => ({
@@ -225,7 +252,7 @@ const positions = [
   const MyPlane = () => {
 	const [ref, api] = usePlane(() => ({
 	  mass: 1,
-	  position: [0, 0, 0],
+	  position: [0, -20, 0],
 	  type: "Static",
 	  rotation: [-Math.PI / 2, 0, 0]
 	}));
@@ -233,7 +260,7 @@ const positions = [
 	  api.rotation.set(-Math.PI / 2 - mouse.y * 0.2, 0 + mouse.x * 0.2, 0);
 	});
 	return (
-	  <mesh scale={200} ref={ref} receiveShadow>
+	  <mesh scale={50} ref={ref} receiveShadow>
 		<planeBufferGeometry />
 		<meshStandardMaterial color="white" side={THREE.DoubleSide} />
 	  </mesh>
@@ -300,10 +327,11 @@ createRoot(document.getElementById('root')).render(
 
 		<AText />
 		
-		<Physics>
+		<Physics >
+			<SmallBox />
 			<Box />
-			<Plane />
-			{/* <APlane /> */}
+			{/* <Plane /> */}
+			<MyPlane /> 
 			<BigBox />
 		</Physics>
 	</Canvas>
