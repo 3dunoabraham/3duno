@@ -77,10 +77,10 @@ function BasketballCourt(props) {
 		setCount(mycounter+1)
 		// console.log(mycounter)
 		// camera.position.x = Math.sin(mycounter * 0.002 ) * 2
-		ref.current.rotation.z = Math.cos(mycounter * 0.01 ) / 3
+		ref.current.rotation.z = Math.cos(mycounter * 0.004 ) / 1.5
 	})
 
-  return <primitive ref={ref} position={[0,1,-2]} scale={[0.7,0.7,0.7]} rotation={[3.14/2,0,0]}  object={scene}  {...props} />
+  return <primitive ref={ref} position={[0,1,-2]} scale={[0.6,0.6,0.6]} rotation={[3.14/2,0,0]}  object={scene}  {...props} />
 }
 
 function AModalButton() {
@@ -195,6 +195,7 @@ const CameraControls = () => {
 		  ref={controls}
 		  args={[camera, domElement]}
 		  enableZoom={true}
+		  enablePan={false}
 		  minDistance={4}
 		  maxDistance={32}
 		  maxPolarAngle={Math.PI/2 * 1.5}
@@ -221,7 +222,7 @@ function BigBox() {
 	// const [mycounter, setCount] = useState(0)
 	// const controls = useRef();
 
-	// useFrame((state) => {
+	useFrame((state) => {
 	// 	// console.log("asd")
 	// 	// console.log("asd", camera)
 	// 	setCount(mycounter+1)
@@ -233,7 +234,8 @@ function BigBox() {
 	// 	// console.log(mycounter)
 	// 	// ref.rotation.y = Math.sin(mycounter * 0.002 ) * 2
 		
-	// });
+	});
+
 	return (
 		<mesh
 			castShadow
@@ -241,7 +243,7 @@ function BigBox() {
 			ref={ref}
 			position={[0, 0, 0]}
 			onClick={() => {
-				console.log("i was here")
+				api.rotation.set(0.3, 0, -0.2);
 			}}
 		>
 			<boxBufferGeometry attach="geometry" args={[2, 1, 2]} />
@@ -280,11 +282,11 @@ function SmallBox() {
 	const [ref, api] = useBox(() => ({ mass: 0.1, position: [0, 8, 0], args:[0.5,0.5,0.5] }));
 
 	 useFrame(({ mouse }) => {
+	     api.rotation.set(-mouse.y * 0.01, mouse.x * 0.8,0);
+	 });
 		 // api.velocity.set(0,0,0);
 	     // api.position.set(mouse.x,mouse.y,0);
-	     api.rotation.set(-mouse.y * 0.01, mouse.x * 0.8,0);
 	     // api.rotation.set(-Math.PI / 2 - mouse.y * 0.2, 0 + mouse.x * 0.2, 0);
-	 });
 	// useFrame(() => {
 	// 	if (!ref.current) {
 	// 		return;
