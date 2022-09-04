@@ -107,6 +107,7 @@ function AModalButton() {
             		Last Projects
         		</small>
     		</a>
+
             <a href="https://dunoabraham.artstation.com/" target="_blank">
             	<small>
             		Artstation | <small>@dunoabraham</small>
@@ -120,6 +121,11 @@ function AModalButton() {
             <a href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">
             	<small>
             		Youtube | <small>@3duno</small>
+        		</small>
+    		</a>
+    		<a href="https://abrahamduno.vercel.app/cv.pdf" target="_blank" style={{opacity:"0.35"}}>
+            	<small>
+        			CV.PDF
         		</small>
     		</a>
   		</div>
