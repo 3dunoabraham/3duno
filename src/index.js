@@ -65,12 +65,12 @@ function AObject() {
 		setCount(mycounter+1)
 		// console.log(mycounter)
 		// camera.position.x = Math.sin(mycounter * 0.002 ) * 2
-		ref.current.rotation.z = Math.sin(mycounter * 0.005 ) / 2
+		ref.current.rotation.z = Math.cos(mycounter * 0.005 ) / 3
 	})
 
     return(
 	    <Suspense fallback={null}>
-	      <primitive ref={ref} object={gltf.scene} position={[0,0,-10]} rotation={[3.14/2,0,0]}/>
+	      <primitive ref={ref} object={gltf.scene} position={[0,1,-10]} rotation={[3.14/2,0,0]} scale={[2,2,2]} />
 	    </Suspense>
     )
 }
@@ -281,23 +281,23 @@ const positions = [
 	);
   }
   
-  const MyPlane = () => {
-	const [ref, api] = usePlane(() => ({
-	  mass: 1,
-	  position: [0, -20, 0],
-	  type: "Static",
-	  rotation: [-Math.PI / 2, 0, 0]
-	}));
-	useFrame(({ mouse }) => {
-	  api.rotation.set(-Math.PI / 2 - mouse.y * 0.2, 0 + mouse.x * 0.2, 0);
-	});
-	return (
-	  <mesh scale={50} ref={ref} receiveShadow>
-		<planeBufferGeometry />
-		<meshStandardMaterial color="white" side={THREE.DoubleSide} />
-	  </mesh>
-	);
-  };
+//  const MyPlane = () => {
+//  const [ref, api] = usePlane(() => ({
+//      mass: 1,
+//      position: [0, -20, 0],
+//      type: "Static",
+//      rotation: [-Math.PI / 2, 0, 0]
+//  }));
+//  useFrame(({ mouse }) => {
+//      api.rotation.set(-Math.PI / 2 - mouse.y * 0.2, 0 + mouse.x * 0.2, 0);
+//  });
+//  return (
+//      <mesh scale={50} ref={ref} receiveShadow>
+//    	     <planeBufferGeometry />
+//    	     <meshStandardMaterial color="white" side={THREE.DoubleSide} />
+//       </mesh>
+//  );
+//  };
   
 
 
@@ -370,7 +370,7 @@ createRoot(document.getElementById('root')).render(
 			<SmallBox />
 			<Box />
 			{/* <Plane /> */}
-			<MyPlane /> 
+			{/* <MyPlane /> */}
 			<BigBox />
 		</Physics>
 	</Canvas>
