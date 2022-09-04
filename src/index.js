@@ -1,12 +1,15 @@
 import * as THREE from "three";
 import { createRoot } from 'react-dom/client'
-import { useRef, useState } from 'react'
+import { useRef, useState, Suspense  } from 'react'
 import {
 	extend,
 	Canvas,
 	useThree,
+	useLoader,
 	useFrame
 } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+
 import {
 	MeshReflectorMaterial,
 	Stars,
@@ -30,11 +33,13 @@ import RenderInBrowser from 'react-render-in-browser';
 
 
 import { UnrealBloomPass } from 'three-stdlib'
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 
 
 
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 
+// import Model from './components/aModel'
 
 // Extend will make OrbitControls available as a JSX element called orbitControls for us to use.
 extend({ OrbitControls });
@@ -42,6 +47,33 @@ extend({ TextGeometry });
 
 extend({ UnrealBloomPass })
 
+// function TheObject() {
+//   const obj = useLoader(OBJLoader, '/ngirls	.obj')
+//   return <primitive object={obj} />
+// }
+
+function AObject() {
+	// const [ref,api] = useRef();
+	const [mycounter, setCount] = useState(0)
+	const ref = useRef();
+	  const gltf = useLoader(GLTFLoader, './text.glb')
+
+	useFrame(() => {
+		if (!ref.current) {
+			return;
+		}
+		setCount(mycounter+1)
+		// console.log(mycounter)
+		// camera.position.x = Math.sin(mycounter * 0.002 ) * 2
+		ref.current.rotation.z = Math.sin(mycounter * 0.005 ) / 2
+	})
+
+    return(
+	    <Suspense fallback={null}>
+	      <primitive ref={ref} object={gltf.scene} position={[0,0,-10]} rotation={[3.14/2,0,0]}/>
+	    </Suspense>
+    )
+}
 
 function AText() {
 	// const [ref,api] = useRef();
@@ -326,6 +358,13 @@ createRoot(document.getElementById('root')).render(
 			{/* <MYText /> */}
 
 		<AText />
+	    <Suspense fallback={null}>
+			<AObject />
+	    </Suspense>
+
+
+	      {/*<TheObject />*/}
+
 		
 		<Physics >
 			<SmallBox />
