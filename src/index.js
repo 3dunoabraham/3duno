@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { createRoot } from 'react-dom/client'
-import { useRef, useState, Suspense  } from 'react'
+import { useRef, useState, useLayoutEffect, Suspense  } from 'react'
 import {
 	extend,
 	Canvas,
@@ -14,6 +14,7 @@ import {
 	MeshReflectorMaterial,
 	Stars,
 	Reflector,
+	useGLTF,
 	CameraShake,
 	Effects,
 	useTexture } from "@react-three/drei";
@@ -62,6 +63,26 @@ const smallboxes = [
   // [0.55, 17, 0.6],
 ];
 
+function BasketballCourt(props) {
+  const { scene } = useGLTF('/text.glb')
+  useLayoutEffect(() => scene.traverse(o => o.isMesh && (o.receiveShadow = true)), [])
+
+
+	const [mycounter, setCount] = useState(0)
+	const ref = useRef();
+	useFrame(() => {
+		if (!ref.current) {
+			return;
+		}
+		setCount(mycounter+1)
+		// console.log(mycounter)
+		// camera.position.x = Math.sin(mycounter * 0.002 ) * 2
+		ref.current.rotation.z = Math.cos(mycounter * 0.01 ) / 3
+	})
+
+  return <primitive ref={ref} position={[0,1,-2]} scale={[0.7,0.7,0.7]} rotation={[3.14/2,0,0]}  object={scene}  {...props} />
+}
+
 function AModalButton() {
   const [show, setShow] = useState(false)
   return (
@@ -80,7 +101,7 @@ function AModalButton() {
         <small> Full-Stack Software Design and 3D Web Development</small>
         <hr/>
 
-        <div style={{display:"flex",flexWrap:"wrap",justifyContent:"flex-end",alignItems:"flex-end",flexDirection:"column"}}>
+        <div style={{display:"flex",flexWrap:"wrap",justifyContent:"flex-end",alignItems:"flex-end",alignSelf:"flex-end",flexDirection:"column"}}>
             <a href="https://duno.vercel.app/" target="_blank">
             	<small>
             		Last Projects
@@ -108,10 +129,10 @@ function AModalButton() {
 }
 function AObject() {
 	// const [ref,api] = useRef();
-	const [mycounter, setCount] = useState(0)
-	const ref = useRef();
 	  const gltf = useLoader(GLTFLoader, './text.glb')
 
+	const [mycounter, setCount] = useState(0)
+	const ref = useRef();
 	useFrame(() => {
 		if (!ref.current) {
 			return;
@@ -124,7 +145,7 @@ function AObject() {
 
     return(
 	    <Suspense fallback={null}>
-	      <primitive ref={ref} object={gltf.scene} position={[0,1,-10]} rotation={[3.14/2,0,0]} scale={[2,2,2]} />
+	      <primitive castShadow receiveShadow ref={ref} object={gltf.scene} position={[0,1,-10]} rotation={[3.14/2,0,0]} scale={[2,2,2]} />
 	    </Suspense>
     )
 }
@@ -448,13 +469,13 @@ createRoot(document.getElementById('root')).render(
 
 		<AText />
 	    <Suspense fallback={null}>
-			<AObject />
+			{/*<AObject />*/}
 	    </Suspense>
 
 
 	      {/*<TheObject />*/}
 
-		
+		<BasketballCourt/>
 		<Physics >
 
         {smallboxes.map((position, idx) => (
