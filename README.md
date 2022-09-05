@@ -6,13 +6,10 @@ Modeling, Sculpting, Texturing, Rigging & Animation
 
 Full-Stack Software Design and 3D Web Development
 
-https://dunoabraham.artstation.com
 
-https://www.instagram.com/3duno
-
-https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug
-
-https://github.com/3dunoabraham/abrahamduno/blob/main/cv.pdf
+* https://dunoabraham.artstation.com
+* https://www.instagram.com/3duno
+* https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug
 
 
 https://3duno.vercel.app/
@@ -20,3 +17,5 @@ https://3duno.vercel.app/
 https://abrahamduno.vercel.app/
 
 https://tresduno.vercel.app/
+
+https://tresweb.vercel.app/cv.pdf
