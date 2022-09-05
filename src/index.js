@@ -123,7 +123,7 @@ function AModalButton() {
             		Youtube | <small>@3duno</small>
         		</small>
     		</a>
-    		<a href="https://abrahamduno.vercel.app/cv.pdf" target="_blank" style={{opacity:"0.35"}}>
+    		<a href="https://tresweb.vercel.app/cv.pdf" target="_blank" style={{opacity:"0.35"}}>
             	<small>
         			CV.PDF
         		</small>
