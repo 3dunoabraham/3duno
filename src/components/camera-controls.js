@@ -3,6 +3,9 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import { useGLTF } from "@react-three/drei";
 import { useThree, useFrame } from '@react-three/fiber'
 
+  // maxAzimuthAngle={Math.PI/2}
+  //  minAzimuthAngle={-Math.PI/2}
+  
 const CameraControls = () => {
   // Get a reference to the Three.js Camera, and the canvas html element.
   // We need these to setup the OrbitControls component.

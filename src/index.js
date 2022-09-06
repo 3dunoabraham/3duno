@@ -31,54 +31,17 @@ function AModalButton() {
 	    ?
 	  </button>}
       <SimpleModal show={show} setShow={setShow}>
-        <p style={{display:"flex",flexWrap:"wrap",justifyContent:"center",alignItems:"center"}}>
-        	<h3 style={{margin:0,color: "#ffb13e",letterSpacing:"2px"}} >General Artist</h3>
-        	<span style={{padding: "0 20px"}}>&</span>
-        	<h3 style={{margin:0,color: "#57b9cf",letterSpacing:"2px"}}>Software Engineer</h3>
-    	</p>
-        <p style={{margin:"0"}}>Modeling, Sculpting, Texturing, Rigging & Animation (<small style={{letterSpacing:"2px"}}>Characters, Scenes, Architecture, Games, Films</small>)</p>
-        
-        <small style={{marginTop:"20px"}}> <b>Full-Stack Multi-Platform Software and Game Development</b> </small>
-        <hr style={{width:"50%"}}/>
-
         <div style={{paddingBottom:"20px",display:"flex",flexWrap:"wrap",justifyContent:"flex-end",alignItems:"flex-end",alignSelf:"flex-end",flexDirection:"column"}}>
-            <a href="https://duno.vercel.app/" target="_blank">
-            	<small>
-            		Last Projects
-        		</small>
-    		</a>
-
-            <a href="https://dunoabraham.artstation.com/" target="_blank">
-            	<small>
-            		Artstation | <small>@dunoabraham</small>
-        		</small>
-    		</a>
-            <a href="https://www.instagram.com/3duno/" target="_blank">
-            	<small>
-            		Instagram | <small>@3duno</small>
-        		</small>
-    		</a>
-            <a href="https://www.youtube.com/channel/UC0A0qWopy-2BnqYvFoENkug" target="_blank">
-            	<small>
-            		Youtube | <small>@3duno</small>
-        		</small>
-    		</a>
     		{<a href="https://tresweb.vercel.app/cv.pdf" target="_blank" style={{opacity:"0.35"}}>
-    		            	<small>
-    		        			CV.PDF
-    		        		</small>
-    		    		</a>}
+            	<small>
+        			CV.PDF
+        		</small>
+    		</a>}
   		</div>
       </SimpleModal>
   	</div>
   )
 }
-
-	// maxAzimuthAngle={Math.PI/2}
-	//  minAzimuthAngle={-Math.PI/2}
-
-
-
 
 const smallboxes = [
   [-0.7, 29, 0.1],
