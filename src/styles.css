@@ -31,25 +31,27 @@ body {
 button:hover {
   background: linear-gradient(-45deg,#202020 ,#20202099);
   box-shadow: 0 0 20px #00000099;
+  border: 1px solid #99000077;
 }
 button {
   box-shadow: 0 0 10px #00000099;
   cursor: pointer;
-  border-radius: 0 0 40px 0;
   font-size: 3em;
   padding: 20px 40px;
-  border: none;
+  border: 1px solid transparent;
   background: linear-gradient(45deg,#202020 ,#20202099);
   color: white;
 }
+.overlay {
+}
 .modal-body {
-  margin-top: 10px;
+  margin-top: 70px;
   background: linear-gradient(180deg,#272727 ,#272727dd);
-  padding: 40px;
+  padding: 10px  40px;
   box-shadow: 10px 10px 40px #00000055;
   width: 100vw;
 }
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 1280px)
 {
   dfn {
     margin-left: 25%;
