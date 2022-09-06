@@ -42,6 +42,18 @@ function AModalButton() {
   	</div>
   )
 }
+function SceneWrapper() {
+  const [scene, setScene] = useState("home")
+  return (
+  	<>
+  		<CameraControls />
+
+	    <Suspense fallback={null}>
+			<TextGLB/>
+	    </Suspense>
+  	</>
+  )
+}
 
 const smallboxes = [
   [-0.7, 29, 0.1],
@@ -177,7 +189,8 @@ createRoot(document.getElementById('root')).render(
 	<AModalButton />
   
 	<Canvas style={{width:"100vw",height:"100vh"}} shadows>
-		<CameraControls />
+		<SceneWrapper />
+		
 
 		<Stars />
 		{/* <color attach="background" args={["#94ebd8"]} /> */}
@@ -202,13 +215,6 @@ createRoot(document.getElementById('root')).render(
 	            <Bloom kernelSize={1} luminanceThreshold={0} luminanceSmoothing={0} intensity={0.2} />
 	        </EffectComposer>
 	    </RenderInBrowser>
-
-
-	    <Suspense fallback={null}>
-	 		
-			<TextGLB/>
-	    </Suspense>
-
 
 		<Physics >
 		    <Suspense fallback={null}>
