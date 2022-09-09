@@ -23,7 +23,7 @@ const SimpleModal = ({ children, show, setShow }) => {
               <hr style={{width:"50%"}}/>
 
                 <div style={{display:"flex",flexWrap:"wrap",justifyContent:"flex-end",alignItems:"flex-end",alignSelf:"flex-end",flexDirection:"column"}}>
-                    <a href="https://duno.vercel.app/" target="_blank">
+                    <a href="https://portworld.vercel.app/" target="_blank">
                       <small>
                         Last Projects
                     </small>
