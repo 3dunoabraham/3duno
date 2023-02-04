@@ -5,5 +5,23 @@
     {"id":"24","category":"game","title":"ColorPlus+","slug":"color@v3"},
     {"id":"25","category":"game","title":"SprotGuess","slug":"sportguess@v2"},
     {"id":"26","category":"game","title":"Arepa2","slug":"arepa@v2"},
-    {"id":"27","category":"game","title":"Thrue Sim","slug":"thrue@v3"}
+    {"id":"27","category":"game","title":"Thrue Sim","slug":"thrue@v3"},
+
+    {"id":"30","category":"game","title":"Clerks Hub","slug":"clerkshub@v3"},
+    {"id":"31","category":"game","title":"Mandala Maker","slug":"thrue@v3"},
+    {"id":"32","category":"game","title":"Random Ideas","slug":"thrue@v3"},
+    {"id":"33","category":"game","title":"Random Idea","slug":"thrue@v3"},
+    {"id":"34","category":"game","title":"Drawnimation","slug":"thrue@v3"},
+    {"id":"36","category":"game","title":"Stranger Things","slug":"thrue@v3"},
+
+    {"id":"50","category":"art","title":"Gargoyle","slug":"gargoyle@v0"},
+    {"id":"51","category":"art","title":"Margarita Island","slug":"mgta@v1"},
+    {"id":"52","category":"art","title":"Harina Pan","slug":"harinagirl@v1"},
+
+    {"id":"61","category":"art","title":"Nameless Girl #1","slug":"ngirl@v1"},
+    {"id":"71","category":"art","title":"Nameless Girl #2","slug":"ngirl@v2"},
+    {"id":"81","category":"art","title":"Nameless Girl #3","slug":"ngirl@v3"},
+    {"id":"91","category":"art","title":"Nameless Girl #4","slug":"ngirl@v4"},
+
+    {"id":"0","category":"art","title":"Diner","slug":"init@v0"}
 ]
