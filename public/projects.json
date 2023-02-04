@@ -1,48 +1,161 @@
 [
-    {"id":"21","status":"1","category":"game","title":"Snake","slug":"snake"},
-    {"id":"22","status":"1","category":"game","title":"Sum","slug":"sum@v1"},
-    {"id":"23","status":"1","category":"game","title":"SumV2","slug":"sum@v2"},
-    {"id":"24","status":"1","category":"game","title":"ColorPlus+","slug":"color@v3"},
-    {"id":"25","status":"1","category":"game","title":"SprotGuess","slug":"sportguess@v2"},
-    {"id":"26","status":"1","category":"game","title":"Arepa2","slug":"arepa@v2"},
-    {"id":"27","status":"1","category":"game","title":"Thrue Sim","slug":"thrue@v3"},
-    {"id":"28","status":"4","category":"game","title":"Guacamisland","slug":"gisla@v1"},
+    {
+        "id":"21","status":"1","category":"game","title":"Snake","slug":"snake",
+        "url": "http://duno.altervista.org/games/snake/"
+    },
+    {
+        "id":"22","status":"1","category":"game","title":"Sum","slug":"sum@v1",
+        "url": "http://duno.altervista.org/games/sum/"
+    },
+    {
+        "id":"23","status":"1","category":"game","title":"SumV2","slug":"sum@v2",
+        "url": "http://duno.altervista.org/games/sumv2/"
+    },
+    {
+        "id":"24","status":"1","category":"game","title":"ColorPlus","slug":"color@v1",
+        "url": "duno.altervista.org/games/colorplus/"
+    },
+    {
+        "id":"25","status":"1","category":"game","title":"SprotGuess","slug":"sportguess@v2",
+        "url": "duno.altervista.org/games/guessing/"
+    },
+    {
+        "id":"26","status":"1","category":"game","title":"Arepa2","slug":"arepa@v2",
+        "url": "http://duno.altervista.org/games/arepa2/"
+    },
+    {
+        "id":"27","status":"1","category":"game","title":"Thrue Sim","slug":"thrue@v3",
+        "url": "https://thrue-beta.vercel.app/"
+    },
+    {
+        "id":"28","status":"4","category":"game","title":"Guacamisland","slug":"gisla@v1",
+        "url": "https://www.youtube.com/watch?v=Krs6xJTKlk0"
+    },
 
-    {"id":"30","status":"1","category":"code","title":"Clerks Hub","slug":"clerkshub@v3"},
-    {"id":"31","status":"1","category":"code","title":"Mandala Maker","slug":"mandala@v2"},
-    {"id":"32","status":"1","category":"code","title":"Random Ideas","slug":"rdm@v2"},
-    {"id":"33","status":"1","category":"code","title":"Random Idea","slug":"rdm@v1"},
-    {"id":"34","status":"1","category":"code","title":"Drawnimation","slug":"drawnim@v2"},
-    {"id":"36","status":"1","category":"code","title":"Stranger Things","slug":"stranger@v1"},
+    {
+        "id":"30","status":"1","category":"code","title":"Clerks Hub","slug":"clerkshub@v3",
+        "url": "duno.altervista.org/code/clerkshub/"
+    },
+    {
+        "id":"31","status":"1","category":"code","title":"Mandala Maker","slug":"mandala@v2",
+        "url": "http://duno.altervista.org/code/mm/"
+    },
+    {
+        "id":"32","status":"1","category":"code","title":"Random Ideas","slug":"rdm@v2",
+        "url": "duno.altervista.org/code/randomidea/"
+    },
+    {
+        "id":"33","status":"1","category":"code","title":"Random Idea","slug":"rdm@v1",
+        "url": "duno.altervista.org/code/random/"
+    },
+    {
+        "id":"34","status":"1","category":"code","title":"Drawnimation","slug":"drawnim@v2",
+        "url": "http://duno.altervista.org/code/drawnimation/"
+    },
+    {
+        "id":"36","status":"1","category":"code","title":"Stranger Things","slug":"stranger@v1",
+        "url": "duno.altervista.org/code/stranger/"
+    },
 
-    {"id":"40","status":"1","category":"code","title":"Autotrader-v1","slug":"trade@v1"},
-    {"id":"41","status":"1","category":"code","title":"Autotrader-v2","slug":"trade@v2"},
-    {"id":"42","status":"1","category":"code","title":"Autotrader-v3","slug":"trade@v3"},
-    {"id":"43","status":"1","category":"code","title":"Dynamic DCA","slug":"ddca@v1"},
-    {"id":"44","status":"1","category":"code","title":"Refungible NFT","slug":"renft@v1"},
-    {"id":"45","status":"1","category":"game","title":"Little Pet Roulette","slug":"openpet@v1"},
+    {
+        "id":"40","status":"1","category":"code","title":"Autotrader-v1","slug":"trade@v1",
+        "url": ""
+    },
+    {
+        "id":"41","status":"1","category":"code","title":"Autotrader-v2","slug":"trade@v2",
+        "url": ""
+    },
+    {
+        "id":"42","status":"1","category":"code","title":"Autotrader-v3","slug":"trade@v3",
+        "url": ""
+    },
+    {
+        "id":"43","status":"1","category":"code","title":"Dynamic DCA","slug":"ddca@v1",
+        "url": ""
+    },
+    {
+        "id":"44","status":"1","category":"code","title":"Refungible NFT","slug":"renft@v1",
+        "url": ""
+    },
+    {
+        "id":"45","status":"1","category":"game","title":"Little Pet Roulette","slug":"openpet@v1",
+        "url": ""
+    },
 
-    {"id":"50","status":"1","category":"art","title":"Gargoyle","slug":"gargoyle@v0"},
-    {"id":"51","status":"1","category":"art","title":"Margarita Island","slug":"mgta@v1"},
-    {"id":"52","status":"1","category":"art","title":"Harina Pan","slug":"harinagirl@v1"},
+    {
+        "id":"50","status":"1","category":"art","title":"Gargoyle","slug":"gargoyle@v0",
+        "url": "https://www.artstation.com/artwork/mqa9ZZ"
+    },
+    {
+        "id":"51","status":"1","category":"art","title":"Margarita Island","slug":"mgta@v1",
+        "url": "https://www.artstation.com/artwork/qAagBy"
+    },
+    {
+        "id":"52","status":"1","category":"art","title":"Harina Pan","slug":"harinagirl@v1",
+        "url": "https://www.instagram.com/p/CJAW98QD7zO/"
+    },
 
-    {"id":"71","status":"1","category":"art","title":"Nameless Girl #1","slug":"ngirl@v1"},
-    {"id":"72","status":"1","category":"art","title":"Nameless Girl #2","slug":"ngirl@v2"},
+    {
+        "id":"71","status":"1","category":"art","title":"Nameless Girl #1","slug":"ngirl@v1",
+        "url": "https://dunoabraham.artstation.com/projects/A9AoxW"
+    },
+    {
+        "id":"72","status":"1","category":"art","title":"Nameless Girl #2","slug":"ngirl@v2",
+        "url": "https://www.artstation.com/artwork/3o6n0o"
+    },
 
-    {"id":"73","status":"1","category":"code","title":"3duno v0 Portfolio","slug":"3duno@v0"},
-    {"id":"74","status":"1","category":"code","title":"Portworld Portfolio","slug":"portworld@v0"},
-    {"id":"75","status":"1","category":"game","title":"Arteesan Lotto","slug":"openlotto@v1"},
-    {"id":"76","status":"1","category":"code","title":"jQuery Template View","slug":"jqv@v0"},
-    {"id":"77","status":"1","category":"code","title":"React Base Dev","slug":"reactbasedev@v0"},
+    {
+        "id":"73","status":"1","category":"code","title":"3duno v0 Portfolio","slug":"3duno@v0",
+        "url": ""
+    },
+    {
+        "id":"74","status":"1","category":"code","title":"Portworld Portfolio","slug":"portworld@v0",
+        "url": ""
+    },
+    {
+        "id":"75","status":"1","category":"game","title":"Arteesan Lotto","slug":"openlotto@v1",
+        "url": ""
+    },
+    {
+        "id":"76","status":"1","category":"code","title":"jQuery Template View","slug":"jqv@v0",
+        "url": ""
+    },
+    {
+        "id":"77","status":"1","category":"code","title":"React Base Dev","slug":"reactbasedev@v0",
+        "url": ""
+    },
 
-    {"id":"81","status":"1","category":"art","title":"Nameless Girl #3","slug":"ngirl@v3"},
-    {"id":"82","status":"1","category":"art","title":"Nameless Girl #4","slug":"ngirl@v4"},
+    {
+        "id":"81","status":"1","category":"art","title":"Nameless Girl #3","slug":"ngirl@v3",
+        "url": "https://www.instagram.com/p/CAY2weQJklv/"
+    },
+    {
+        "id":"82","status":"1","category":"art","title":"Nameless Girl #4","slug":"ngirl@v4",
+        "url": "https://www.artstation.com/artwork/Vgd8QZ"
+    },
 
-    {"id":"101","status":"1","category":"game","title":"Skate Or Die","slug":"sk8@v1"},
+    {
+        "id":"101","status":"1","category":"game","title":"Skate Or Die","slug":"sk8@v1",
+        "url": ""
+    },
 
-    {"id":"111","status":"1","category":"code","title":"CssCss","slug":"csscss@v1.0.2"},
-    {"id":"112","status":"1","category":"code","title":"Dynamic DCA Grid","slug":"ddcag@v1"},
-    {"id":"113","status":"1","category":"code","title":"Abraham Duno Portfolio","slug":"aduno@v1"},
+    {
+        "id":"111","status":"1","category":"code","title":"CssCss","slug":"csscss@v1.0.2",
+        "url": "https://www.npmjs.com/package/csscss"
+    },
+    {
+        "id":"112","status":"1","category":"code","title":"Dynamic DCA Grid","slug":"ddcag@v1",
+        "url": "https://react-duno.vercel.app/"
+    },
+    {
+        "id":"113","status":"1","category":"code","title":"Abraham Duno Portfolio","slug":"aduno@v1",
+        "url": "https://abrahamduno.vercel.app/"
+    },
 
-    {"id":"0","status":"1","category":"art","title":"Table","slug":"init@v0"}
+
+
+    {
+        "id":"0","status":"1","category":"art","title":"Table","slug":"init@v0",
+        "url": ""
+    } 
 ]
