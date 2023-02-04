@@ -7,21 +7,41 @@
     {"id":"26","category":"game","title":"Arepa2","slug":"arepa@v2"},
     {"id":"27","category":"game","title":"Thrue Sim","slug":"thrue@v3"},
 
-    {"id":"30","category":"game","title":"Clerks Hub","slug":"clerkshub@v3"},
-    {"id":"31","category":"game","title":"Mandala Maker","slug":"thrue@v3"},
-    {"id":"32","category":"game","title":"Random Ideas","slug":"thrue@v3"},
-    {"id":"33","category":"game","title":"Random Idea","slug":"thrue@v3"},
-    {"id":"34","category":"game","title":"Drawnimation","slug":"thrue@v3"},
-    {"id":"36","category":"game","title":"Stranger Things","slug":"thrue@v3"},
+    {"id":"30","category":"code","title":"Clerks Hub","slug":"clerkshub@v3"},
+    {"id":"31","category":"code","title":"Mandala Maker","slug":"mandala@v2"},
+    {"id":"32","category":"code","title":"Random Ideas","slug":"rdm@v2"},
+    {"id":"33","category":"code","title":"Random Idea","slug":"rdm@v1"},
+    {"id":"34","category":"code","title":"Drawnimation","slug":"drawnim@v2"},
+    {"id":"36","category":"code","title":"Stranger Things","slug":"stranger@v1"},
+
+    {"id":"40","category":"code","title":"Autotrader-v1","slug":"trade@v1"},
+    {"id":"41","category":"code","title":"Autotrader-v2","slug":"trade@v2"},
+    {"id":"42","category":"code","title":"Autotrader-v3","slug":"trade@v3"},
+    {"id":"43","category":"code","title":"Dynamic DCA","slug":"ddca@v1"},
+    {"id":"44","category":"code","title":"Refungible NFT","slug":"renft@v1"},
+    {"id":"45","category":"game","title":"Little Pet Roulette","slug":"openpet@v1"},
 
     {"id":"50","category":"art","title":"Gargoyle","slug":"gargoyle@v0"},
     {"id":"51","category":"art","title":"Margarita Island","slug":"mgta@v1"},
     {"id":"52","category":"art","title":"Harina Pan","slug":"harinagirl@v1"},
 
-    {"id":"61","category":"art","title":"Nameless Girl #1","slug":"ngirl@v1"},
-    {"id":"71","category":"art","title":"Nameless Girl #2","slug":"ngirl@v2"},
-    {"id":"81","category":"art","title":"Nameless Girl #3","slug":"ngirl@v3"},
-    {"id":"91","category":"art","title":"Nameless Girl #4","slug":"ngirl@v4"},
+    {"id":"71","category":"art","title":"Nameless Girl #1","slug":"ngirl@v1"},
+    {"id":"72","category":"art","title":"Nameless Girl #2","slug":"ngirl@v2"},
 
-    {"id":"0","category":"art","title":"Diner","slug":"init@v0"}
+    {"id":"73","category":"code","title":"3duno v0 Portfolio","slug":"3duno@v0"},
+    {"id":"74","category":"code","title":"Portworld Portfolio","slug":"portworld@v0"},
+    {"id":"75","category":"game","title":"Arteesan Lotto","slug":"openlotto@v1"},
+    {"id":"76","category":"code","title":"jQuery Template View","slug":"jqv@v0"},
+    {"id":"77","category":"code","title":"React Base Dev","slug":"reactbasedev@v0"},
+
+    {"id":"81","category":"art","title":"Nameless Girl #3","slug":"ngirl@v3"},
+    {"id":"82","category":"art","title":"Nameless Girl #4","slug":"ngirl@v4"},
+
+    {"id":"101","category":"game","title":"Skate Or Die","slug":"sk8@v1"},
+
+    {"id":"111","category":"code","title":"CssCss","slug":"csscss@v1.0.2"},
+    {"id":"112","category":"code","title":"Dynamic DCA Grid","slug":"ddcag@v1"},
+    {"id":"113","category":"code","title":"Abraham Duno Portfolio","slug":"aduno@v1"},
+
+    {"id":"0","category":"art","title":"Table","slug":"init@v0"}
 ]
