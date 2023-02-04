@@ -13,11 +13,11 @@
     },
     {
         "id":"24","status":"1","category":"game","title":"ColorPlus","vip":"0","slug":"color@v1",
-        "date": "1675526107817","url": "duno.altervista.org/games/colorplus/"
+        "date": "1675526107817","url": "http://duno.altervista.org/games/colorplus/"
     },
     {
         "id":"25","status":"1","category":"game","title":"SprotGuess","vip":"0","slug":"sportguess@v2",
-        "date": "1675526107817","url": "duno.altervista.org/games/guessing/"
+        "date": "1675526107817","url": "http://duno.altervista.org/games/guessing/"
     },
     {
         "id":"26","status":"1","category":"game","title":"Arepa2","vip":"0","slug":"arepa@v2",
@@ -34,7 +34,7 @@
 
     {
         "id":"30","status":"1","category":"code","title":"Clerks Hub","vip":"0","slug":"clerkshub@v3",
-        "date": "1675526107817","url": "duno.altervista.org/code/clerkshub/"
+        "date": "1675526107817","url": "http://duno.altervista.org/code/clerkshub/"
     },
     {
         "id":"31","status":"1","category":"code","title":"Mandala Maker","vip":"0","slug":"mandala@v2",
@@ -42,11 +42,11 @@
     },
     {
         "id":"32","status":"1","category":"code","title":"Random Ideas","vip":"0","slug":"rdm@v2",
-        "date": "1675526107817","url": "duno.altervista.org/code/randomidea/"
+        "date": "1675526107817","url": "http://duno.altervista.org/code/randomidea/"
     },
     {
         "id":"33","status":"1","category":"code","title":"Random Idea","vip":"0","slug":"rdm@v1",
-        "date": "1675526107817","url": "duno.altervista.org/code/random/"
+        "date": "1675526107817","url": "http://duno.altervista.org/code/random/"
     },
     {
         "id":"34","status":"1","category":"code","title":"Drawnimation","vip":"0","slug":"drawnim@v2",
@@ -54,7 +54,7 @@
     },
     {
         "id":"36","status":"1","category":"code","title":"Stranger Things","vip":"0","slug":"stranger@v1",
-        "date": "1675526107817","url": "duno.altervista.org/code/stranger/"
+        "date": "1675526107817","url": "http://duno.altervista.org/code/stranger/"
     },
 
     {
