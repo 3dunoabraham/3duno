@@ -1,9 +1,9 @@
 [
     {"id":"21","category":"game","title":"Snake","slug":"snake"},
     {"id":"22","category":"game","title":"Sum","slug":"sum@v1"},
-    {"id":"23","category":"game","title":"SumV2","slug":"sum@v2"}
-    {"id":"24","category":"game","title":"ColorPlus+","slug":"color@v3"}
-    {"id":"25","category":"game","title":"SprotGuess","slug":"sportguess@v2"}
-    {"id":"26","category":"game","title":"Arepa2","slug":"arepa@v2"}
+    {"id":"23","category":"game","title":"SumV2","slug":"sum@v2"},
+    {"id":"24","category":"game","title":"ColorPlus+","slug":"color@v3"},
+    {"id":"25","category":"game","title":"SprotGuess","slug":"sportguess@v2"},
+    {"id":"26","category":"game","title":"Arepa2","slug":"arepa@v2"},
     {"id":"27","category":"game","title":"Thrue Sim","slug":"thrue@v3"}
 ]
