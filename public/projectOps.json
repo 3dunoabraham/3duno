@@ -1,26 +1,33 @@
 {
-    "status": [
-        {"id":"1","slug": "available"},
-        {"id":"2","slug": "temporal"},
-        {"id":"3","slug": "private"},
-        {"id":"4","slug": "not available"}
+    "statuses": [
+        {"id":"1","slug": "Available"},
+        {"id":"2","slug": "Temporal"},
+        {"id":"3","slug": "Private"},
+        {"id":"4","slug": "Not Available"}
     ],
-    "category": [
-        {"id":"1","slug": "object"},
-        {"id":"2","slug": "picture"},
-        {"id":"3","slug": "animation"},
-        {"id":"4","slug": "mixed"}
+    "categories": [
+        {"id":"1","slug": "3D Traditional"},
+        {"id":"2","slug": "2D Traditional"},
+        {"id":"3","slug": "3D Digital"},
+        {"id":"4","slug": "2D Digital"},
+        {"id":"5","slug": "Mixed"}
     ],
-    "subcategory": [
-        {"id":"1","slug": "object"},
-        {"id":"2","slug": "picture"},
-        {"id":"3","slug": "animation"},
-        {"id":"4","slug": "mixed"}
+    "subcategories": [
+        {"id":"1","slug": "Object"},
+        {"id":"2","slug": "Picture"},
+        {"id":"3","slug": "Animation"},
+        {"id":"4","slug": "Mixed"}
     ],
-    "style": [
-        {"id":"1","slug": "classic"},
-        {"id":"2","slug": "modern"},
-        {"id":"3","slug": "futuristic"},
-        {"id":"4","slug": "mixed"}
+    "owners": [
+        {"id":"1","slug": "Own"},
+        {"id":"2","slug": "Third Party"},
+        {"id":"3","slug": "None"},
+        {"id":"4","slug": "Mixed"}
+    ],
+    "styles": [
+        {"id":"1","slug": "Classic"},
+        {"id":"2","slug": "Modern"},
+        {"id":"3","slug": "Futuristic"},
+        {"id":"4","slug": "Mixed"}
     ]
 }
