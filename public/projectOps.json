@@ -1,8 +1,26 @@
 {
+    "status": [
+        {"id":"1","slug": "available"},
+        {"id":"2","slug": "temporal"},
+        {"id":"3","slug": "private"},
+        {"id":"4","slug": "not available"}
+    ],
+    "category": [
+        {"id":"1","slug": "object"},
+        {"id":"2","slug": "picture"},
+        {"id":"3","slug": "animation"},
+        {"id":"4","slug": "mixed"}
+    ],
     "subcategory": [
         {"id":"1","slug": "object"},
         {"id":"2","slug": "picture"},
         {"id":"3","slug": "animation"},
         {"id":"4","slug": "mixed"}
     ],
+    "style": [
+        {"id":"1","slug": "classic"},
+        {"id":"2","slug": "modern"},
+        {"id":"3","slug": "futuristic"},
+        {"id":"4","slug": "mixed"}
+    ]
 }
